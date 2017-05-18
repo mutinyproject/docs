@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title><?makedown title?></title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="<?makedown description?>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="<?makedown author?>" />
+    <meta name="date" content="<?makedown date?>" />
+    <meta name="generator" content="<?makedown version?>" />
+    <link rel="icon" type="image/png" href="/favicon.png" sizes="96x96" />
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+</head>
+<body>
+    <header class='pageheader'>
+        <div class='title'>
+            <a href='/'>
+                <h1><?makedown site_name?></h1>
+                <small class='title'>An open-source rebellion against the computing of today</small>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href='/download'>Download</a></li>
+                <li><a href='/docs'>Documentation</a></li>
+                <li><a href='/packages'>Packages</a></li>
+            </ul>
+        </nav>
+        <form action='https://duckduckgo.com' class='search'>
+            <input type='hidden' name='sites' value='mutiny.somasis.com' />
+            <input type='search' name='q' autocomplete="on" placeholder='Search...' />
+        </form>
+    </header>
+    <nav class='toc'>
+        <?makedown toc?>
+    </nav>
+    <main>
+        <header>
+            <h1><?makedown title_unprefixed_escaped?></h1>
+        </header>
+        <?makedown body?>
+    </main>
+    <footer>
+        <small>
+            This work is dedicated to the public domain using the <a href='https://creativecommons.org/publicdomain/zero/1.0/'>Creative Commons Zero 1.0 Universal</a> license.<br />
+            <a title='Latest commit to this page' href='https://gitlab.com/mutiny/www/commit/<?makedown file_commit?>'><?makedown file_commit?></a> / <a title='Latest commit to entire site' href='https://gitlab.com/mutiny/www/commit/<?makedown tree_commit?>'><?makedown tree_commit?></a>
+        </small>
+    </footer>
+</body>
+</html>

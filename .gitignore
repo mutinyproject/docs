@@ -1,0 +1,6 @@
+*.bak
+*.html
+*.tmp
+*~
+
+work/
