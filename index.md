@@ -27,7 +27,7 @@ foundations vying for the most adoption and most marketable product.
     - Have spectacular documentation.
     - Use permissively licensed software. Code should be free to use by anyone,
       for anything, in any scenario.
-    - There is no base, there is no "ports". Decentralized programs come
+    - There is no base, there are no "ports". Decentralized programs come
       together to create the user's system.
 
 [musl libc]: https://www.musl-libc.org/
