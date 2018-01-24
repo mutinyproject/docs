@@ -1,4 +1,4 @@
-# Package API
+# pkg(7)
 ## The package API for Mutiny systems.
 
 ->**`Current version: pkg0`**<-
