@@ -1,9 +1,10 @@
-# Design of system
+# Design
 ## Details, overview, and other notes about the design of a theoretical Mutiny system.
 
 Mutiny is a project inspired by multiple different Linux distributions, software made in
 response to system hegemony, embedded systems, interest in BSD-styles of design, and an
-interest in forward-thinking system design.
+interest in forward-thinking system design. Systems can be integrated, be well put together,
+and allow for deviance. They must.
 
 Systems should carry as little legacy, and give as little bend to the popular software
 and development groups as possible. Open standards exist for this very reason, to give
@@ -18,10 +19,11 @@ with all the power; decentralize.
 Software should be chosen that is in line with the idea of a slim, opinionated (but not
 difficult to use if you don't entirely agree with the choices made) operating system.
 
-Recommended readings along this thinking are any policy by the OpenBSD group,
-talks by Rob Landley, ...
+We live in a time where systems are changing rapidly, and the possibilities of system design
+are changing in new exciting ways. Mutiny is a response to this, an attempt to carry out
+the perfect concept of a modern Unix system with attention paid at every level.
 
-Aim to support any use case worth supporting: desktop, server, small devices, containers
+Aim to support any use case worth supporting: desktop, server, small devices, containers.
 
 ## System
 
