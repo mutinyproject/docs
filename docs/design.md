@@ -31,7 +31,8 @@ Aim to support any use case worth supporting: desktop, server, small devices, co
 
 - Avoid GNU software when a viable alternative exists
     - Best example: gcc vs clang
-- Prefer software with less legacy
+- Prefer software with less legacy, unless legacy is required
+    - ncurses vs. netbsd-curses
 - Slim software whenever it is possible.
 - Package base
     - `musl`
@@ -42,7 +43,8 @@ Aim to support any use case worth supporting: desktop, server, small devices, co
     - `mandoc`
     - `toybox`
     - `busybox`
-    - `mksh`... or maybe `pdksh`/`loksh`
+    - `mksh`
+    - `s6`, `s6-rc`
 
 ## Filesystem layout
 
