@@ -2,17 +2,19 @@
 ## A project to create an open-source operating system with no compromises.
 
 Mutiny is a project to create a modern day open-source operating system that makes no compromises
-in terms of software and philosophy. Less cruft, more flexibility, suitable for any purpose desired.
+in terms of software and philosophy. Less cruft, and suitable for any purpose desired.
 
 As of now it's based around the Linux kernel, [musl libc], and the LLVM toolchain. The init system
-that we're starting with is [s6]+[s6-rc], but the goal is that the system will be as flexible as
-possible and allow for any init system, any libc, any toolchain, and so on.
+that we're starting with is [s6]+[s6-rc], with the goal being to integrate those tools in such a
+manner that administering the system is a joy.
 
-No Red Hat, no GNU, no group with all the power. An open system with the interests of the developers
-and spirit of free development for the betterment of computing, rather than companies and
-foundations vying for the most adoption and most marketable product.
+An open system with the interests of the developers and spirit of free development for the
+betterment and progression of computing, rather than companies and foundations vying for the most
+adoption and most marketable product.
 
 ## Design
+
+Read [the full design document][Design] for a more in-depth look.
 
 - Allow for building from source and using binary packages through the same
   package manager.
