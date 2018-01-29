@@ -46,6 +46,23 @@ Aim to support any use case worth supporting: desktop, server, small devices, co
     - `mksh`
     - `s6`, `s6-rc`
 
+### System administration
+
+The state of system administration nowadays can be very fragmented. Most people just search
+for the documentation online nowadays, finding the manuals to be lacking, or just too archaic.
+
+However, you will notice this is rarely a problem with *BSD systems. This is because BSD systems,
+historically, have put more emphasis on good documentation of their systems. Every single aspect
+of the kernel's internals, drivers, quirks, etc., is documented in a manpage.
+
+On a large scale, this unity in the system is what Mutiny is striving for. Linux systems have had
+a tendency to be disjointed at times, as the model which the system is developed in doesn't usually
+corrispond to the stewardship that comes with the tightly-managed attitude of something like OpenBSD.
+
+Where we can best improve this is in the administration of a system.
+
+->**TODO: elaborate with references to s6, s6-rc, user instances, etc.**<-
+
 ### Mutiny utilities
 
 - `riot` - a source-based and binary-based package manager
