@@ -46,7 +46,12 @@ Aim to support any use case worth supporting: desktop, server, small devices, co
     - `mksh`
     - `s6`, `s6-rc`
 
-## Filesystem layout
+### Mutiny utilities
+
+- `riot` - a source-based and binary-based package manager
+- `synonym` - a utility for managing alternatives
+
+### Filesystem layout
 
 ```text
 /   - Also the root user's home directory.
@@ -111,15 +116,19 @@ There's also some symlinks so we don't have to wrestle with other software...
 
 ## Prior art
 
+- Exherbo Linux
 - OpenBSD
 - Sabotage Linux
 - Void Linux
 - Stali
 - Morpheus Linux
-- Exherbo Linux
 
-## Mutiny utilities
+## Recommended reading
 
-- `riot` - source-based and binary-based package manager
-- `synonym` - utility for managing alternatives
+- [OpenBSD's project goals](https://www.openbsd.org/goals.html)
+- [OpenBSD's copyright policy](https://www.openbsd.org/policy.html)
+- [Rob Landley at the Embedded Linux Conference 2013, discussing `toybox`](https://www.youtube.com/watch?v=SGmtP5Lg_t0)
+- [Rob Landley at the Embedded Linux Conference 2015, more `toybox` discussion](https://www.youtube.com/watch?v=04XwAbtPmAg)
+- [Rob Landley at Ohio LinuxFest 2013](https://archive.org/details/OhioLinuxfest2013/24-Rob_Landley-The_Rise_and_Fall_of_Copyleft.flac)
+- [Ted Nelson's Computer Paradigm](http://hyperland.com/TedCompOneLiners)
 
