@@ -14,7 +14,8 @@ adoption and most marketable product.
 
 ## Design
 
-Read [the full design document][Design] for a more in-depth look.
+Read [the full design document][Design] for a more in-depth look and for some philosophical
+underpinnings.
 
 - Allow for building from source and using binary packages through the same
   package manager.
