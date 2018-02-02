@@ -33,14 +33,15 @@ Aim to support any use case worth supporting: desktop, server, small devices, co
 - Slim software whenever it is possible.
 - Package base
     - `musl`
+    - `fortify-headers`
     - `clang`
     - `libc++`
-    - `fortify-headers`
     - `libressl`
     - `mandoc`
     - `toybox`
-    - `busybox`
+        - `busybox` to fill in the cracks, temporarily
     - `mksh`
+        - The long-term plan is to switch to the [Oil shell](#Oil shell) once it is fully functional
     - `s6`, `s6-rc`
 
 ### System administration
