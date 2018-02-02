@@ -4,20 +4,17 @@
 Mutiny is a project inspired by multiple different Linux distributions, software made in
 response to system hegemony, embedded systems, interest in BSD-styles of design, and an
 interest in forward-thinking system design. Systems can be integrated, be well put together,
-and allow for deviance. They must.
+and allow for deviance.
 
 Systems should carry as little legacy, and give as little bend to the popular software
 and development groups as possible. Open standards exist for this very reason, to give
-us the ablity to create diversity in the computer world while preserving the ability to
-maintain a level of operability with systems of other origin, ideology, and reasoning.
+us the ability to create diversity in the computer world while preserving the ability to
+maintain a level of interoperability with systems of other origin, ideology, and reasoning.
 
-Additionally, this ideal system should aim for using the best solution, with the best
-developers, and the people most partaking in this line of thinking, over any alternative.
-No developing for proprietary unixes anymore, no more RedHat, no more GNU, no more groups
-with all the power; decentralize.
-
-Software should be chosen that is in line with the idea of a slim, opinionated (but not
-difficult to use if you don't entirely agree with the choices made) operating system.
+Decentralize. Using software from one development group means you become beholden to the
+interests of that group, and it promotes vendor lock-in; the clearest example of this
+would be how much the state of the Unix desktop and server has changed because of the
+choices that GNOME, RedHat, etc. have made.
 
 We live in a time where systems are changing rapidly, and the possibilities of system design
 are changing in new exciting ways. Mutiny is a response to this, an attempt to carry out
@@ -57,7 +54,7 @@ of the kernel's internals, drivers, quirks, etc., is documented in a manpage.
 
 On a large scale, this unity in the system is what Mutiny is striving for. Linux systems have had
 a tendency to be disjointed at times, as the model which the system is developed in doesn't usually
-corrispond to the stewardship that comes with the tightly-managed attitude of something like OpenBSD.
+correspond to the stewardship that comes with the tightly-managed attitude of something like OpenBSD.
 
 Where we can best improve this is in the administration of a system.
 
@@ -125,7 +122,7 @@ There's also some symlinks so we don't have to wrestle with other software...
 - Reasonable command line interface
 - Run (inexpensive) tests by default
 - Libraries
-    - See: Gentoo's eclasses, Exherbo's exlibs.
+    - See: Gentoo's eclasses, Exherbo's exlibs
 - Useful metadata
     - Build dependencies vs. runtime dependencies
     - Licenses
