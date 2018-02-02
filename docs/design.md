@@ -27,9 +27,9 @@ Aim to support any use case worth supporting: desktop, server, small devices, co
 ### Software base
 
 - Avoid GNU software when a viable alternative exists
-    - Best example: gcc vs clang
+    - Best example: GCC vs Clang
 - Prefer software with less legacy, unless legacy is required
-    - ncurses vs. netbsd-curses
+    - `ncurses` vs. `netbsd-curses`?
 - Slim software whenever it is possible.
 - Package base
     - `musl`
