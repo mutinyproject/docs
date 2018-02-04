@@ -1,4 +1,4 @@
-# Design
+# mutiny(7)
 ## Details, overview, and other notes about the design of a theoretical Mutiny system.
 
 Mutiny is a project inspired by multiple different Linux distributions, software made in
