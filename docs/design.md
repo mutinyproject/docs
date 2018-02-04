@@ -147,6 +147,7 @@ There's also some symlinks so we don't have to wrestle with other software...
 - Exherbo Linux
 - OpenBSD
 - Sabotage Linux
+- Alpine Linux
 - Void Linux
 - Stali
 - Morpheus Linux
