@@ -44,6 +44,19 @@ Aim to support any use case worth supporting: desktop, server, small devices, co
         - The long-term plan is to switch to the [Oil shell](#Oil shell) once it is fully functional
     - `s6`, `s6-rc`
 
+#### Oil shell
+
+[Oil] is a new Unix shell that aims to both be able to run scripts for `bash`, POSIX sh, etc., as
+well as implement and define a new shell language that fixes a lot of problems in shell scripting.
+The idea is that it will superscede `bash`, treating shell scripting as a serious language that
+things can be written in.
+
+Things like data types, actual *real* functions, well implemented arrays, those will be in Oil.
+
+As it stands I'm just waiting for it to be fleshed out more.
+
+[Oil]: https://www.oilshell.org/
+
 ### System administration
 
 The state of system administration nowadays can be very fragmented. Most people just search
