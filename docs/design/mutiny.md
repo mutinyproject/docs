@@ -22,40 +22,32 @@ the perfect concept of a modern Unix system with attention paid at every level.
 
 Aim to support any use case worth supporting: desktop, server, small devices, containers.
 
-## System
+## Philosophy
 
-### Software base
+This section will outline the intent and approach to design that Mutiny aims to have.
 
-- Avoid GNU software when a viable alternative exists
-    - Best example: GCC vs Clang
-- Prefer software with less legacy, unless legacy is required
-    - `ncurses` vs. `netbsd-curses`?
-- Slim software whenever it is possible.
-- Package base
-    - `musl`
-    - `fortify-headers`
-    - `clang`
-    - `libc++`
-    - `libressl`
-    - `mandoc`
-    - `toybox`
-        - `busybox` to fill in the cracks, temporarily
-    - `mksh`
-        - The long-term plan is to switch to the [Oil shell](#Oil shell) once it is fully functional
-    - `s6`, `s6-rc`
+### Core concepts
 
-#### Oil shell
+- **System consistency**: Unix systems have suffered from a large amount of inconsistencies
+  in maintenance and style in the past decades. Software should be bent to conform, and
+  users should come to expect things are going to be a certain way.
 
-[Oil] is a new Unix shell that aims to both be able to run scripts for `bash`, POSIX sh, etc., as
-well as implement and define a new shell language that fixes a lot of problems in shell scripting.
-The idea is that it will superscede `bash`, treating shell scripting as a serious language that
-things can be written in.
+### Standards adherence
 
-Things like data types, actual *real* functions, well implemented arrays, those will be in Oil.
+Mutiny should aim to adhere to standards whenever it is possible, and enforce those standards
+on all software that the system uses. When a standard isn't good, or we think it is badly
+designed, we should aim to supersede it with a defined standard of our own. The prime example
+of a bad standard being replaced in Mutiny is the [filesystem layout][mutiny(7)#Filesystem layout],
+which supersedes the [Filesystem Hierarchy Standard] and systemd's [file-hierarchy].
 
-As it stands I'm just waiting for it to be fleshed out more.
+Good examples of standards we want to follow would be standards like the [XDG Base Directory
+Specification]. When we follow a good standard, we should aim to follow it strictly, and
+impose that standard on all vendored software, as this goes towards one of the core ideas:
+system consistency.
 
-[Oil]: https://www.oilshell.org/
+[Filesystem Hierarchy Standard]: http://refspecs.linuxfoundation.org/FHS_3.0/fhs-3.0.html
+[file-hierarchy]: https://www.freedesktop.org/software/systemd/man/file-hierarchy.html
+[XDG Base Directory Specification]: https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
 
 ### System administration
 
@@ -73,6 +65,51 @@ correspond to the stewardship that comes with the tightly-managed attitude of so
 Where we can best improve this is in the administration of a system.
 
 ->**TODO: elaborate with references to s6, s6-rc, user instances, etc.**<-
+
+## Prior art
+
+- Exherbo Linux
+- OpenBSD
+- Sabotage Linux
+- Alpine Linux
+- Void Linux
+- Stali
+- Morpheus Linux
+
+### Recommended reading
+
+- [OpenBSD's project goals](https://www.openbsd.org/goals.html)
+- [OpenBSD's copyright policy](https://www.openbsd.org/policy.html)
+- [Rob Landley at the Embedded Linux Conference 2013, discussing `toybox`](https://www.youtube.com/watch?v=SGmtP5Lg_t0)
+- [Rob Landley at the Embedded Linux Conference 2015, more `toybox` discussion](https://www.youtube.com/watch?v=04XwAbtPmAg)
+- [Rob Landley at Ohio LinuxFest 2013](https://archive.org/details/OhioLinuxfest2013/24-Rob_Landley-The_Rise_and_Fall_of_Copyleft.flac)
+- [Ted Nelson's Computer Paradigm](http://hyperland.com/TedCompOneLiners)
+
+## System
+
+### Software base
+
+- Avoid GNU software when a viable alternative exists
+    - Best example: GCC vs Clang
+- Prefer software with less legacy, unless legacy is required
+    - `ncurses` vs. `netbsd-curses`?
+- Slim software whenever it is possible.
+- Package base
+    - `musl`
+    - `libressl`
+    - `mandoc`
+    - `toybox`
+        - `busybox` to fill in the cracks, temporarily
+    - `mksh`
+        - The long-term plan is to switch to the [Oil shell] once it is fully functional
+    - `s6`, `s6-rc`
+    - Development utilities:
+        - `fortify-headers`
+        - `clang` over `gcc`
+        - `libc++` over `libstdc++`
+        - `byacc` over `bison`
+
+[Oil shell]: https://www.oilshell.org/
 
 ### Mutiny utilities
 
@@ -141,23 +178,4 @@ There's also some symlinks so we don't have to wrestle with other software...
     - Build dependencies vs. runtime dependencies
     - Licenses
     - Links to documentation
-
-## Prior art
-
-- Exherbo Linux
-- OpenBSD
-- Sabotage Linux
-- Alpine Linux
-- Void Linux
-- Stali
-- Morpheus Linux
-
-## Recommended reading
-
-- [OpenBSD's project goals](https://www.openbsd.org/goals.html)
-- [OpenBSD's copyright policy](https://www.openbsd.org/policy.html)
-- [Rob Landley at the Embedded Linux Conference 2013, discussing `toybox`](https://www.youtube.com/watch?v=SGmtP5Lg_t0)
-- [Rob Landley at the Embedded Linux Conference 2015, more `toybox` discussion](https://www.youtube.com/watch?v=04XwAbtPmAg)
-- [Rob Landley at Ohio LinuxFest 2013](https://archive.org/details/OhioLinuxfest2013/24-Rob_Landley-The_Rise_and_Fall_of_Copyleft.flac)
-- [Ted Nelson's Computer Paradigm](http://hyperland.com/TedCompOneLiners)
 
