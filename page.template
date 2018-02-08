@@ -27,7 +27,7 @@
             </ul>
         </nav>
         <form action='https://duckduckgo.com' class='search'>
-            <input type='hidden' name='sites' value='mutiny.somasis.com' />
+            <input type='hidden' name='sites' value='mutiny.somas.is' />
             <input type='search' name='q' autocomplete="on" placeholder='Search...' />
         </form>
     </header>
