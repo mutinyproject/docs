@@ -269,6 +269,7 @@ nav.toc ul {
 nav.toc>ul {
     padding-left: 0px;
     min-height: 48px;
+    margin-left: -24px;
 }
 
 nav.toc ul li:before {
