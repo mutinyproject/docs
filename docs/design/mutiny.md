@@ -9,12 +9,12 @@ and allow for deviance.
 Systems should carry as little legacy, and give as little bend to the popular software
 and development groups as possible. Open standards exist for this very reason, to give
 us the ability to create diversity in the computer world while preserving the ability to
-maintain a level of interoperability with systems of other origin, ideology, and reasoning.
+maintain a level of interoperability with systems of other origin, ideology, and reason.
 
 Decentralize. Using software from one development group means you become beholden to the
-interests of that group, and it promotes vendor lock-in; the clearest example of this
-would be how much the state of the Unix desktop and server has changed because of the
-choices that GNOME, RedHat, etc. have made.
+interests of that group, and it promotes vendor lock-in; the clearest example of this would
+be how much the state of the Unix desktop and server has changed because of the choices that
+GNOME, RedHat, etc. have made.
 
 We live in a time where systems are changing rapidly, and the possibilities of system design
 are changing in new exciting ways. Mutiny is a response to this, an attempt to carry out
@@ -41,9 +41,7 @@ of a bad standard being replaced in Mutiny is the [filesystem layout][mutiny(7)#
 which supersedes the [Filesystem Hierarchy Standard] and systemd's [file-hierarchy].
 
 Good examples of standards we want to follow would be standards like the [XDG Base Directory
-Specification]. When we follow a good standard, we should aim to follow it strictly, and
-impose that standard on all vendored software, as this goes towards one of the core ideas:
-system consistency.
+Specification].
 
 [Filesystem Hierarchy Standard]: http://refspecs.linuxfoundation.org/FHS_3.0/fhs-3.0.html
 [file-hierarchy]: https://www.freedesktop.org/software/systemd/man/file-hierarchy.html
@@ -103,7 +101,7 @@ Where we can best improve this is in the administration of a system.
     - `mksh`
         - The long-term plan is to switch to the [Oil shell] once it is fully functional
     - `s6`, `s6-rc`
-    - Development utilities:
+    - Toolchain:
         - `fortify-headers`
         - `clang` over `gcc`
         - `libc++` over `libstdc++`
