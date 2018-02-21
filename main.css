@@ -8,9 +8,15 @@
  * mutiny is noncommercial.
  */
 
+/* NOTE: /ttf/rkilloi.* files are modified to ONLY have the glyphs for "MUTINY". */
 @font-face {
-    font-family: 'Righteous Kill';
-    src: url('/ttf/rkilloi.woff2') format('woff2');
+    font-family: 'Righteous Kill Outline';
+    font-width: bold;
+    font-style: italic;
+    src: local('Righteous Kill Outline')
+         url('/ttf/rkilloi.woff2') format('woff2'),
+         url('/ttf/rkilloi.woff') format('woff'),
+         url('/ttf/rkilloi.ttf') format('ttf');
 }
 
 body {
@@ -95,8 +101,10 @@ header.pageheader div.title {
 }
 
 header.pageheader div.title h1 {
-    font-weight: bold;
-    font-family: "Righteous Kill";
+    font-family: "Righteous Kill Outline";
+    font-width: bold;
+    font-style: italic;
+    text-transform: uppercase;
     font-size: 72pt;
     border-bottom: 0px;
     margin-left: -12px;
