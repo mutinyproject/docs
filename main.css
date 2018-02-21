@@ -1,6 +1,5 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,700');
 @import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
 
 /* Righteous Kill licensing terms are found here: http://www.iconian.com/commercial.html
@@ -29,7 +28,7 @@ body {
     color: #c0c5ce;
     background-color: #2f343f;
 
-    font-family: "Roboto", sans-serif;
+    font-family: sans-serif;
     font-size: 12pt;
 }
 
@@ -114,6 +113,7 @@ header.pageheader div.title img {
     vertical-align: middle;
 }
 
+header.pageheader div.title,
 header.pageheader div.title a,
 header.pageheader div.title a:hover,
 header.pageheader small {
@@ -182,7 +182,7 @@ p code {
     color: #ededed;
     padding: 0px 4px;
     border-radius: 2px;
-    font-family: "Roboto Mono", monospace;
+    font-family: monospace;
     font-size: 11pt;
 }
 
@@ -244,7 +244,7 @@ form.search input[type='search'] {
 }
 
 nav.toc:not(:empty):before {
-    font-family: "FontAwesome", "Roboto", sans-serif;
+    font-family: "FontAwesome", sans-serif;
     content: "\f02d\00a0Table of Contents";
     color: #999999;
     width: 100%;
