@@ -103,13 +103,13 @@ of four different parts, of which only the name is required.
 
 Given the fully-qualified spec `package#1.0:1::repository`...
 
--   Package name (`package`)
--   Package version (`1.0`)
--   Package slot (`1`)
--   Package repository (`repository`)
+- Package name (`package`)
+- Package version (`1.0`)
+- Package slot (`1`)
+- Package repository (`repository`)
 
 For a package spec to be valid, it **must** match the regex
-`^([A-Za-z0-9_+-]+)(#[0-9a-z\._-]+)?(:[0-9\.]+)?(::[0-9A-Za-z_-]+)?$`.
+`([A-Za-z0-9_+-]+)(#[0-9a-z\._-]+)?(:[0-9\.]+)?(::[0-9A-Za-z_-]+)?`.
 
 Breaking it down:
 
