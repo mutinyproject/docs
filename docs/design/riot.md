@@ -14,3 +14,31 @@
     - multiple ways to sync repositories
         - paludis has sync prefixes: `cave sync -s local repository`
 
+## Configuration
+
+## `/etc/riot/masks`
+
+```text
+ignore      linux-headers[>$(uname -r | cut -d- -f1)]
+```
+
+## `/etc/riot/build.conf`
+
+```text
+*           -* ruby ssl
+toybox      MAKEFLAGS="-j1" static
+lighttpd    -ssl webdav pcre MAKEFLAGS="-j -l3"
+```
+
+## `/etc/riot/world`
+
+Packages specifically requested to be installed by the user. They were not installed
+as dependencies of other packages.
+
+```
+beets
+lighttpd
+mpd
+pass
+```
+
