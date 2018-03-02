@@ -106,6 +106,7 @@ Where we can best improve this is in the administration of a system.
         - `clang` over `gcc`
         - `libc++` over `libstdc++`
         - `byacc` over `bison`
+        - `gettext-tiny` over `gettext`
 
 [Oil shell]: https://www.oilshell.org/
 
@@ -177,3 +178,18 @@ There's also some symlinks so we don't have to wrestle with other software...
     - Licenses
     - Links to documentation
 
+## Random notes
+
+(ideally these will disappear and turn into their own sections or pages or what have you)
+
+### On languages and internationalization
+
+The insistance of English being "the default language of computing" as a rationale to justify
+not replacing `gettext` is really quite stupid, when not blatently xenophobic. English is *not*
+the most spoken language in the world, and asserting default languages of entire fields is
+dangerous.
+
+Mutiny packages should allow for options to only install whatever languages are going to be used.
+We *can* set `en` as the default language that is enabled in packages, but only if we are going
+to provide complete support to those who speak other languages. There's an obvious question here
+as to documentation and support through things like IRC though, and I'm only one person.
