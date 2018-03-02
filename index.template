@@ -21,9 +21,9 @@
         </div>
         <nav>
             <ul>
-                <li><a href='/download'>Download</a></li>
+                <li><!-- <a href='/download'>Download</a> --></li>
                 <li><a href='/docs'>Documentation</a></li>
-                <li><a href='/packages'>Packages</a></li>
+                <li><!-- <a href='/packages'>Packages</a> --></li>
             </ul>
         </nav>
         <form action='https://duckduckgo.com' class='search'>
