@@ -40,7 +40,7 @@
     <footer>
         <small>
             This work is dedicated to the public domain using the <a href='https://creativecommons.org/publicdomain/zero/1.0/'>Creative Commons Zero 1.0 Universal</a> license.<br />
-            <a title='Latest commit to this page' href='https://gitlab.com/mutiny/www/commit/<?makedown file_commit?>'><?makedown file_commit?></a> / <a title='Latest commit to entire site' href='https://gitlab.com/mutiny/www/commit/<?makedown tree_commit?>'><?makedown tree_commit?></a>
+            <a title='Latest commit to this page' href='https://github.com/mutinyproject/www/commit/<?makedown file_commit?>'><?makedown file_commit?></a> / <a title='Latest commit to entire site' href='https://github.com/mutinyproject/www/commit/<?makedown tree_commit?>'><?makedown tree_commit?></a>
         </small>
     </footer>
 </body>
