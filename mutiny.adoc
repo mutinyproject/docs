@@ -1,0 +1,254 @@
+= mutiny(7)
+:description: Details, overview, and other notes about the design of a theoretical Mutiny system.
+:toc: right
+:toclevels: 4
+:sectlinks:
+:sectanchors:
+:idprefix:
+
+:pp: ++
+
+== Name
+
+mutiny - a Linux distribution that aims to be a testbed for interesting system design, forward
+thinking choices, and fun computing
+
+== Synopsis
+
+Mutiny is a project inspired by multiple different Linux distributions, software made in response to
+system hegemony, embedded systems, interest in BSD-styles of design, and an interest in
+forward-thinking system design. Systems can be integrated, be well put together, and allow for
+deviance.
+
+Systems should carry as little legacy, and give as little bend to the popular software and
+development groups as possible. Open standards exist for this very reason, to give us the ability to
+create diversity in the computer world while preserving the ability to maintain a level of
+interoperability with systems of other origin, ideology, and reason.
+
+Decentralize. Using software from one development group means you become beholden to the interests
+of that group, and it promotes vendor lock-in; the clearest example of this would be how much the
+state of the Unix desktop and server has changed because of the choices that GNOME, RedHat, etc.
+have made.
+
+We live in a time where systems are changing rapidly, and the possibilities of system design are
+changing in new exciting ways. Mutiny is a response to this, an attempt to carry out the perfect
+concept of a modern Unix system with attention paid at every level.
+
+Aim to support any use case worth supporting: desktop, server, small devices, containers.
+
+== Philosophy
+z
+This section will outline the intent and approach to design that Mutiny aims to have.
+
+=== Core concepts
+
+* **Consistency**: Unix systems have suffered from a large amount of inconsistencies
+  in maintenance and style in the past decades. Software should be bent to conform, and
+  users should come to expect things are going to be a certain way on a Mutiny system.
+* **Documentation**: The system should be thoroughly documented so that you never need to
+  reference external websites in order to learn about it. Documentation should be consistent,
+  too. This means all documentation should be accessible through `man` or `/usr/share/doc`.
+* **Security**: Mutiny should strive for secure design. We should be proactive and use hardening
+  measures when possible, through `FORTIFY_SOURCE`, kernel hardening, and other measures.
+
+=== Standards adherence
+
+:filesystem-hierarchy-standard:     http://refspecs.linuxfoundation.org/FHS_3.0/fhs-3.0.html
+:file-hierarchy:                    https://www.freedesktop.org/software/systemd/man/file-hierarchy.html
+:xdg-base-directory-specification:  https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
+
+Mutiny should aim to adhere to standards whenever it is possible, and enforce those standards
+on all software that the system uses. When a standard isn't good, or we think it is badly
+designed, we should aim to supersede it with a defined standard of our own. The prime example
+of a bad standard being replaced in Mutiny is the <<filesystem layout>>, which supersedes the
+{filesystem-hierarchy-standard}[Filesystem Hierarchy Standard] and systemd's
+{file-hierarchy}[file-hierarchy].
+
+Good examples of standards we want to follow would be standards like the
+{xdg-base-directory-specification}[XDG Base Directory Specification].
+
+=== System administration
+
+The state of system administration nowadays can be very fragmented. Most people just search for the
+documentation online nowadays, finding the manuals to be lacking, or just too archaic.
+
+However, you will notice this is rarely a problem with *BSD systems. This is because BSD systems,
+historically, have put more emphasis on good documentation of their systems. Every single aspect of
+the kernel's internals, drivers, quirks, etc., is documented in a manpage.
+
+On a large scale, this unity in the system is what Mutiny is striving for. Linux systems have had a
+tendency to be disjointed at times, as the model which the system is developed in doesn't usually
+correspond to the stewardship that comes with the tightly-managed attitude of something like OpenBSD.
+
+Where we can best improve this is in the administration of a system.
+
+== Prior art
+
+:openbsd: https://www.openbsd.org
+
+* https://www.exherbo.org[Exherbo Linux]
+* {openbsd}[OpenBSD]
+* http://sabotage.tech[Sabotage Linux]
+* https://alpinelinux.org[Alpine Linux]
+* https://voidlinux.eu[Void Linux]
+* https://stal.li[stali]
+* https://github.com/michaelforney/oasis[oasis]
+* https://morpheus.2f30.org[Morpheus Linux]
+
+=== Recommended reading
+
+* {openbsd}/goals.html[OpenBSD's project goals]
+* {openbsd}/policy.html[OpenBSD's copyright policy]
+* https://www.youtube.com/watch?v=SGmtP5Lg_t0[Rob Landley at the Embedded Linux Conference 2013, discussing `toybox`]
+* https://www.youtube.com/watch?v=04XwAbtPmAg[Rob Landley at the Embedded Linux Conference 2015, more `toybox` discussion]
+* https://archive.org/details/OhioLinuxfest2013/24-Rob_Landley-The_Rise_and_Fall_of_Copyleft.flac[Rob Landley at Ohio LinuxFest 2013]
+* http://hyperland.com/TedCompOneLiners[Ted Nelson's Computer Paradigm]
+
+== System
+
+:skarnet:   https://skarnet.org/software
+:gnu:       https://www.gnu.org/software
+:oil-shell: https://www.oilshell.org
+
+.Software
+* Prefer software with less legacy.
+* Slim software whenever it is possible.
+* Packages
+    ** Base
+        *** https://www.musl-libc.org[`musl`]
+        *** https://www.libressl.org[`libressl`]
+        *** http://mandoc.bsd.lv[`mandoc`]
+        *** http://www.landley.net/toybox/[`toybox`]
+            **** https://www.busybox.net[`busybox`] to fill in the cracks, temporarily
+        *** https://www.mirbsd.org/mksh.htm[`mksh`]
+            **** The long-term plan is to switch to the {oil-shell}[Oil shell] once it is fully functional
+        *** {skarnet}/s6[`s6`], {skarnet}/s6-rc[`s6-rc`]
+    ** Toolchain
+        *** https://git.2f30.org/fortify-headers/[`fortify-headers`]
+        *** https://clang.llvm.org[`clang`] over {gnu}/gcc[`gcc`]
+        *** https://libcxx.llvm.org[`libc{pp}`] over `libstdc{pp}`
+        *** http://invisible-island.net/byacc/byacc.html[`byacc`] over {gnu}/bison[`bison`]
+        *** https://github.com/sabotage-linux/gettext-tiny[`gettext-tiny`] over {gnu}/gettext[`gettext`]
+
+=== Mutiny utilities
+
+* `praxis` - a source-based and binary-based package manager
+* `synonym` - a utility for managing alternatives
+* `commune` - utilities for working with the `s6` and `s6-rc` state manager with Mutiny policy
+    ** `commune-session` - manages the login/logout actions for a user (cf. `systemd-logind`)
+    ** `commune-user` - manages the user’s services and states (cf. `systemd --user`)
+    ** `commune-xinit` - manages the user’s Xorg session
+
+=== Filesystem layout
+
+```text
+/   - Also the root user's home directory.
+    /bin                - Link to host/bin
+    /dev                - Device files (devtmpfs)
+    /etc                - System-localized configuration
+    /home               - User files
+    /host -> ${CHOST}   - Symlink to default CHOST
+    /lib                - Link to host/lib
+    /lib64              - Link to host/lib64               - Only on x86_64 hosts
+    /local              - System-localized files (not managed by packages)
+        /local/bin      - Link to ../host/local/bin
+        /local/include  - Link to ../host/local/include
+        /local/lib      - Link to ../host/local/lib
+        /local/share    - User-managed resources. (separate, not architecture-specific)
+        /local/sbin     - Link to ../host/local/sbin
+    /media              - Link to mnt
+    /mnt                - Mounted devices
+    /run            - Runtime files (non-persistent), such as... (tmpfs)
+        /run/tmp        - Temporary files
+        /run/user       - User runtime directories
+            /run/user/<uid> - User's XDG_RUNTIME_DIR, created by `commune-session`
+    /proc           - Process information (procfs)
+    /sbin               - Link to host/sbin
+    /share          - Documentation, other resources
+        /share/factory  - Default configuration files
+        /share/man      - Manual pages (man)
+    /src            - Source (kernel things, usually)
+        /src/praxis     - Source for packages built by praxis
+    /srv            - Service data (httpd, git-daemon)
+    /sys            - System/kernel information (sysfs)
+    /usr                - Link to .
+    /tmp            - Link to run/tmp
+    /var            - Persistent system data (for daemons and system programs)
+        /var/cache      - Cache for system programs
+        /var/log        - Log files for system programs
+        /var/lib        - Databases and other data for system programs
+        /var/run        - Link to ../run
+        /var/spool      - Spools maintained by certain daemons (mail, crond, cupsd, etc)
+        /var/tmp        - Persistent yet temporary files, not cleared at boot
+    /${CHOST}   - Directories containing ${CHOST}-only files (bins/libs)
+        /bin            - Binaries
+        /include        - Header files for compiled programs
+        /lib            - Libraries, internal binaries for other programs
+        /local          - System-localized files, not managed or otherwise modified by praxis
+            /local/bin      - User-managed binaries
+            /local/include  - User-managed header files
+            /local/lib      - User-managed libraries, internal binaries
+```
+
+== Package design
+
+* Reasonable command line interface
+* Run (inexpensive) tests by default
+* Libraries
+    ** See: Gentoo's eclasses, Exherbo's exlibs
+* Useful metadata
+    ** Build dependencies vs. runtime dependencies
+    ** Licenses
+    ** Links to documentation
+
+== Random notes
+
+(ideally these will disappear and turn into their own sections or pages or what have you)
+
+=== On languages and internationalization
+
+The insistance of English being "the default language of computing" as a rationale to justify
+not replacing `gettext` is rather stupid, when not a bit xenophobic. Asserting default languages
+of entire fields has real world implications when it gets down to the people using them. There's a
+really interesting tendency in the Unix development crowds that have minimalist design tendencies
+to just ignore this.
+
+Mutiny packages should allow for options to only install whatever languages are going to be used.
+We _can_ set `en_US` as the default language that is enabled in packages, but only if we are going
+to provide complete support to those who speak other languages. There's an obvious question here
+as to documentation and support through things like IRC though, and I'm only one person.
+
+=== Documentation
+
+A goal should be to ensure that all documentation is `mdoc` format. `s6` is a notable example of a
+project that doesn't currently have manpages, though I believe that's something many people in the
+community have been wanting.
+
+There's a few tools written by the main `mandoc` dev that convert other formats to mdoc, they might
+be worth looking at.
+
+* https://mandoc.bsd.lv/docbook2mdoc/[`docbook2mdoc`]
+* https://mandoc.bsd.lv/pod2mdoc/[`pod2mdoc`]
+* http://mandoc.bsd.lv/texi2mdoc/[`texi2mdoc`]
+
+=== s6 based stuff
+
+In Mutiny, a goal should be to have the same software powering many scopes of the system this
+promotes the ability to have an intimate familiarity with the foundation of your system, and thus an
+easier introduction to administrating it and doing cool stuff with it. A really good point in which
+this can be carried out is in `s6` and `s6-rc`.
+
+I have a work in progress implementation of doing this at the `xinit` level, since it's definitely
+possible to do a supervisor as your session manager for Xorg sessions. Furthermore, this should be
+able to be carried up to the login level. (call it `commune-session`, maybe) This could mean user
+services for users on the system, perhaps akin to systemd's user scope...
+
+=== Software contortions
+
+* GNOME software
+    ** https://unix.stackexchange.com/a/426348[dconf's plain text configuration method]
+    ** https://developer.gnome.org/gio/stable/GSettingsBackend.html#g-keyfile-settings-backend-new[gsettings' "keyfile" backend]
+    *** `GSETTINGS_BACKEND=keyfile`
+    *** https://developer.gnome.org/gio/stable/GSettingsBackend.html#g-settings-backend-get-default["It is possible to override the default by setting the GSETTINGS_BACKEND environment variable to the name of a settings backend."]
+* XDG contortions
+    ** https://wiki.archlinux.org/index.php/XDG_Base_Directory#Partial[lots of software can be told to use XDG if you just give them the right variables]
