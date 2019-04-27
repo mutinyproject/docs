@@ -46,6 +46,8 @@ ignore      linux-headers[>$(uname -r | cut -d- -f1)]
 Options enabled on packages; this may also include things such as environment variables.
 
 ----
+MAKEFLAGS="-j12"
+
 *           -* ruby ssl
 toybox      MAKEFLAGS="-j1" static
 lighttpd    webdav pcre -lua MAKEFLAGS="-j -l3"
