@@ -1,6 +1,16 @@
 = praxis-design(7)
 
-Design of the `praxis` package manager.
+== Name
+
+praxis - reference implementation of the package manager for Mutiny
+
+Named as such to conform with the rest of the Mutiny naming scheme. "Praxis," the word, means in the
+original Greek, "action." Packages are referred to as theories, thus praxis carries out a
+theory(7). `praxis` is the reference implementation of the package manager used by mutiny(7).
+
+== Synopsis
+
+This page consists of documentation on the design of the `praxis` package manager.
 
 == Wishlist
 
