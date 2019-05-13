@@ -10,6 +10,9 @@
 
 ifdef::backend-html5[]
 image::logo.svg[Mutiny logo]
+
+Mutiny is a young project! If you find the ideas here interesting, please reach out at
+irc://irc.freenode.net/mutiny[#mutiny@irc.freenode.net].
 endif::[]
 
 == Name
