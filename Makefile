@@ -1,15 +1,19 @@
 export DEBUG ?= -v --failure-level=error
 
 export SRCDIR = $(abspath $(dir $(lastword $(MAKEFILE_LIST))))
-export BUILDDIR ?= $(SRCDIR)/build
+export BUILDDIR := $(SRCDIR)/build
+export IMAGE ?= $(SRCDIR)/image
 
-DOCS := $(shell cd $(SRCDIR) && find -name '*.adoc')
+DOCS := $(shell find $(SRCDIR)/././ -type f -a \( -name '*.adoc' \) -a \! \( -path '$(SRCDIR)/././build/*' -o -path '$(SRCDIR)/././image/*' \))
+DOCS := $(subst $(SRCDIR)/././,,$(DOCS))
 HTML := $(DOCS:.adoc=.html)
+AUX  := $(shell find $(SRCDIR)/././ -type f -a \( -name '*.svg' \) -a \! \( -path '$(SRCDIR)/././build/*' -o -path '$(SRCDIR)/././image/*' \))
+AUX  := $(subst $(SRCDIR)/././,,$(AUX))
 
 .PHONY: all man html deploy-html watch clean
-all: html man
+all: html man aux
 
-$(BUILDDIR)/html/%.html: %.adoc $(SRCDIR)/docinfo-footer.html
+$(BUILDDIR)/html/%.html: $(SRCDIR)/%.adoc $(SRCDIR)/docinfo-footer.html
 	@mkdir -p $(BUILDDIR)/html
 	asciidoctor $(DEBUG) -B . -b html5 \
 		-o "$@" \
@@ -19,20 +23,31 @@ $(BUILDDIR)/html/%.html: %.adoc $(SRCDIR)/docinfo-footer.html
 		-a author \
 		$(SRCDIR)/$*.adoc
 
+$(BUILDDIR)/aux/%: $(SRCDIR)/%
+	@mkdir -p $(BUILDDIR)/aux/$(dir $*)
+	cp -f $(SRCDIR)/$* $(BUILDDIR)/aux/$*
+
 man:
 	@$(SRCDIR)/scripts/mkman.sh
 	
 html: $(foreach h,$(HTML),$(BUILDDIR)/html/$(h))
+aux: $(foreach a,$(AUX),$(BUILDDIR)/aux/$(a))
 
-deploy-html: html
-	rsync -uvr "$(BUILDDIR)"/html/ "$(DESTDIR)"
-	ln -sf mutiny.7.html $(DESTDIR)/index.html
+deploy: html aux
+	rsync -vr "$(BUILDDIR)"/html/ "$(BUILDDIR)"/aux/ "$(IMAGE)"/
+	ln -sf mutiny.7.html $(IMAGE)/index.html
 
-.ONESHELL:
 watch: ; $(MAKE) -j1
-	WATCH=true
-	sh -c 'exit 2'
-	while [ $$? -eq 2 ];do printf '%s\n' $(DOCS) | entr -dn $(MAKE);done
+	WATCH=true; \
+	cd $(SRCDIR); \
+	sh -c 'exit 2'; \
+	while [ $$? -eq 2 ];do printf '%s\n' Makefile $(DOCS) $(AUX) | entr -dn $(MAKE) --no-print-directory;done
+
+watch-deploy: ; $(MAKE) -j1
+	WATCH=true; \
+	cd $(SRCDIR); \
+	sh -c 'exit 2'; \
+	while [ $$? -eq 2 ];do printf '%s\n' Makefile $(DOCS) $(AUX) | entr -dn $(MAKE) all deploy --no-print-directory;done
 
 clean:
-	rm -rf $(BUILDDIR)
+	rm -rf $(BUILDDIR) $(IMAGE)
