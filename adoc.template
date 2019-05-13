@@ -1,0 +1,14 @@
+= template(1)
+:description: A description of the page in a sentence or two.
+:toc: right
+:sectlinks:
+:sectanchors:
+:idprefix:
+
+== Name
+
+template - an example AsciiDoc document that demonstrates the preferred style for writing
+documentation under the Mutiny project
+
+== Synopsis
+
