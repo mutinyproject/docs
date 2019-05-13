@@ -1,0 +1,17 @@
+= software
+:description: A list of software in line with the Mutiny philosophy.
+:toc: right
+:sectlinks:
+:sectanchors:
+:idprefix:
+
+* https://github.com/Airblader/unclutter-xfixes[unclutter-xfixes]
+* https://bitbucket.org/raymonad/xss-lock[xss-lock]
+* https://github.com/google/xsecurelock[xsecurelock]
+* https://sourceforge.net/projects/acpid2[acpid]
+* https://github.com/troglobit/xplugd[xplugd]
+* https://www.passwordstore.org/[password-store] - something without a dependency on bash would be
+  nicer though
+* https://github.com/DaveDavenport/rofi[rofi]
+* https://github.com/dunst-project/dunst[dunst] - a non-python alike would be nicer though...
+* browser...?
