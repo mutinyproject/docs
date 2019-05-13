@@ -13,6 +13,16 @@ image::logo.svg[Mutiny logo]
 
 Mutiny is a young project! If you find the ideas here interesting, please reach out at
 irc://irc.freenode.net/mutiny[#mutiny@irc.freenode.net].
+
+There's a https://gitlab.com/mutiny[GitLab group] with some small repositories up on it. No bootable
+system yet, this OS mostly exists as a pile of documents and some broken chroots for now.
+
+There's a few other documents written currently:
+
+* A short design document about <<praxis/design.7.adoc#,praxis>>, the package manager.
+* A longer but unfinished document about the package API, <<theory.7.adoc#,theory>>.
+* A <<software.adoc#,software>> running list of software that might be of interest for Mutiny.
+
 endif::[]
 
 == Name
@@ -142,7 +152,7 @@ found on the <<software.adoc,software doc>>.
 
 === Mutiny utilities
 
-* `praxis` - a source-based package manager
+* <<praxis/design.7.adoc#,`praxis`>> - a source-based package manager
 * `synonym` - a utility for managing alternatives
 * `commune` - utilities for working with the `s6` and `s6-rc` state manager with Mutiny policy
     ** `commune-session` - manages the login/logout actions for a user (cf. `systemd-logind`)
