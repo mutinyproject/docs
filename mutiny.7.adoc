@@ -44,7 +44,7 @@ concept of a modern Unix system with attention paid at every level.
 Aim to support any use case worth supporting: desktop, server, small devices, containers.
 
 == Philosophy
-z
+
 This section will outline the intent and approach to design that Mutiny aims to have.
 
 === Core concepts
