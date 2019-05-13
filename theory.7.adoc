@@ -1,9 +1,16 @@
 = theory(7)
-The package API for Mutiny systems.
+:description: Theory is the package API for Mutiny systems.
+:toc: right
+:toclevels: 4
+:sectlinks:
+:sectanchors:
+:idprefix:
 
-**`Current version: theory0`**
+== Name
 
-This is extremely work in progress, don’t implement anything in it yet.
+theory - package API used by Mutiny
+
+== Synopsis
 
 This document aims to explain the API available for writing packages for Mutiny. This should be
 considered the definitive document to consult when writing packages, or when developing package

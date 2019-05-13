@@ -8,6 +8,10 @@
 
 :pp: ++
 
+ifdef::backend-html5[]
+image::logo.svg[Mutiny logo]
+endif::[]
+
 == Name
 
 mutiny - a Linux distribution that aims to be a testbed for interesting system design, forward
@@ -125,14 +129,17 @@ Where we can best improve this is in the administration of a system.
         *** {skarnet}/s6[`s6`], {skarnet}/s6-rc[`s6-rc`]
     ** Toolchain
         *** https://git.2f30.org/fortify-headers/[`fortify-headers`]
-        *** https://clang.llvm.org[`clang`] over {gnu}/gcc[`gcc`]
-        *** https://libcxx.llvm.org[`libc{pp}`] over `libstdc{pp}`
-        *** http://invisible-island.net/byacc/byacc.html[`byacc`] over {gnu}/bison[`bison`]
-        *** https://github.com/sabotage-linux/gettext-tiny[`gettext-tiny`] over {gnu}/gettext[`gettext`]
+        *** https://clang.llvm.org[`clang`]
+        *** https://libcxx.llvm.org[`libc{pp}`]
+        *** http://invisible-island.net/byacc/byacc.html[`byacc`]
+        *** https://github.com/sabotage-linux/gettext-tiny[`gettext-tiny`]
+
+Nonessential but otherwise interesting software that would be a good fit to the philosophy can be
+found on the <<software.adoc,software doc>>.
 
 === Mutiny utilities
 
-* `praxis` - a source-based and binary-based package manager
+* `praxis` - a source-based package manager
 * `synonym` - a utility for managing alternatives
 * `commune` - utilities for working with the `s6` and `s6-rc` state manager with Mutiny policy
     ** `commune-session` - manages the login/logout actions for a user (cf. `systemd-logind`)
