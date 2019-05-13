@@ -21,7 +21,7 @@ There's a few other documents written currently:
 
 * A short design document about <<praxis/design.7.adoc#,praxis>>, the package manager.
 * A longer but unfinished document about the package API, <<theory.7.adoc#,theory>>.
-* A <<software.adoc#,software>> running list of software that might be of interest for Mutiny.
+* A <<software.adoc#,running list of software>> that might be of interest for Mutiny.
 
 endif::[]
 
