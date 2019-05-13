@@ -25,8 +25,8 @@ man:
 html: $(foreach h,$(HTML),$(BUILDDIR)/html/$(h))
 
 deploy-html: html
-	echo ln -sf mutiny.7.html $(BUILDDIR)/index.html
-	echo rsync -uvr "$(BUILDDIR)"/html/ "$(DESTDIR)"
+	rsync -uvr "$(BUILDDIR)"/html/ "$(DESTDIR)"
+	ln -sf mutiny.7.html $(DESTDIR)/index.html
 
 .ONESHELL:
 watch: ; $(MAKE) -j1
