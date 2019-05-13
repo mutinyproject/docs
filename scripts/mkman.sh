@@ -13,6 +13,7 @@ find -type f -name '*.adoc' | sed -E '/[0-9].adoc$/!d; s:^\./::;s:\.adoc::' | \
     if [ "${source}" -nt "${dest}" ];then
         edo cat "${source}" docinfo-footer.man | \
         edo asciidoctor ${DEBUG} \
+            -B "${SRCDIR}" \
             -o "${dest}" \
             -b manpage \
             -a docinfo="shared" \

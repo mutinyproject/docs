@@ -15,12 +15,12 @@ all: html man aux
 
 $(BUILDDIR)/html/%.html: $(SRCDIR)/%.adoc $(SRCDIR)/docinfo-footer.html
 	@mkdir -p $(BUILDDIR)/html
-	asciidoctor $(DEBUG) -B . -b html5 \
-		-o "$@" \
-		-a "docinfo=shared" \
+	asciidoctor $(DEBUG) \
+		-B $(SRCDIR) \
+		-b html5 \
+		-a docinfo=shared \
 		-a linkcss \
-		-a nofooter \
-		-a author \
+		-o "$@" \
 		$(SRCDIR)/$*.adoc
 
 $(BUILDDIR)/aux/%: $(SRCDIR)/%
