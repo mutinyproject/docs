@@ -11,7 +11,13 @@ find -type f -name '*.adoc' | sed -E '/[0-9].adoc$/!d; s:^\./::;s:\.adoc::' | \
     dest="${BUILDDIR}"/man/man${section}/"${dest}"
     [ -d "${dest%/*}" ] || edo mkdir -p "${dest%/*}"
     if [ "${source}" -nt "${dest}" ];then
-        edo asciidoctor ${DEBUG} -o "${dest}" -b manpage -a manmanual="Mutiny manual" "${source}"
+        edo cat "${source}" docinfo-footer.man | \
+        edo asciidoctor ${DEBUG} \
+            -o "${dest}" \
+            -b manpage \
+            -a docinfo="shared" \
+            -a manmanual="Mutiny manual" \
+            /dev/stdin
     fi
 done
 
