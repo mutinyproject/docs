@@ -1,18 +1,19 @@
 = mutiny(7)
-:description: Details, overview, and other notes about the design of a theoretical Mutiny system.
+:description: Details, overview, and other notes about the design of a Mutiny system.
 :toc: right
 :toclevels: 4
 :sectlinks:
 :sectanchors:
 :idprefix:
 
+:notitle:
 :pp: ++
 
 ifdef::backend-html5[]
 image::logo.svg[Mutiny logo]
 
 Mutiny is a young project! If you find the ideas here interesting, please reach out at
-irc://irc.freenode.net/mutiny[#mutiny@irc.freenode.net].
+link:irc://irc.freenode.net/mutiny[#mutiny@irc.freenode.net].
 
 There's a https://gitlab.com/mutiny[GitLab group] with some small repositories up on it. No bootable
 system yet, this OS mostly exists as a pile of documents and some broken chroots for now.
@@ -77,7 +78,7 @@ This section will outline the intent and approach to design that Mutiny aims to 
 Mutiny should aim to adhere to standards whenever it is possible, and enforce those standards
 on all software that the system uses. When a standard isn't good, or we think it is badly
 designed, we should aim to supersede it with a defined standard of our own. The prime example
-of a bad standard being replaced in Mutiny is the <<filesystem layout>>, which supersedes the
+of a bad standard being replaced in Mutiny is the <<Filesystem layout>>, which supersedes the
 {filesystem-hierarchy-standard}[Filesystem Hierarchy Standard] and systemd's
 {file-hierarchy}[file-hierarchy].
 
@@ -148,7 +149,7 @@ Where we can best improve this is in the administration of a system.
         *** https://github.com/sabotage-linux/gettext-tiny[`gettext-tiny`]
 
 Nonessential but otherwise interesting software that would be a good fit to the philosophy can be
-found on the <<software.adoc,software doc>>.
+found on the <<software.adoc#,software page>>.
 
 === Mutiny utilities
 
