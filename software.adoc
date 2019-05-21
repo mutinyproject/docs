@@ -1,4 +1,6 @@
 = software
+Kylie J. McClain <kylie@somas.is>
+
 :description: A list of software in line with the Mutiny philosophy.
 :toc: right
 :sectlinks:
