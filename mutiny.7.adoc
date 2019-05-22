@@ -103,16 +103,16 @@ Where we can best improve this is in the administration of a system.
 
 == Prior art
 
-:openbsd: https://www.openbsd.org
-
-* https://www.exherbo.org[Exherbo Linux]
-* {openbsd}[OpenBSD]
+* https://www.exherbo.org[Exherbo Linux] - My former distribution of choice, helped me realize the
+  potential of source-based distributions; ultimately our interests diverged.
+* https://www.openbsd.org[OpenBSD]
 * http://sabotage.tech[Sabotage Linux]
 * https://alpinelinux.org[Alpine Linux]
 * https://voidlinux.eu[Void Linux]
 * https://stal.li[stali]
 * https://github.com/michaelforney/oasis[oasis]
 * https://morpheus.2f30.org[Morpheus Linux]
+* https://github.com/kissx/kiss[kiss linux]
 
 === Recommended reading
 
