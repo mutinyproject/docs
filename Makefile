@@ -22,7 +22,7 @@ all: html man aux
 $(BUILDDIR)/man/%.man: $(SRCDIR)/%.adoc $(SRCDIR)/docinfo-footer.man
 	@mkdir -p $(BUILDDIR)/man
 	asciidoctor $(DEBUG) \
-		-B $(SRCDIR) \
+		-B $(BUILDDIR) \
 		-b manpage \
 		-a docinfo=shared \
 		-a docinfodir=$(SRCDIR) \
@@ -33,7 +33,7 @@ $(BUILDDIR)/man/%.man: $(SRCDIR)/%.adoc $(SRCDIR)/docinfo-footer.man
 $(BUILDDIR)/html/%.html: $(SRCDIR)/%.adoc $(SRCDIR)/docinfo-footer.html
 	@mkdir -p $(BUILDDIR)/html
 	asciidoctor $(DEBUG) \
-		-B $(SRCDIR) \
+		-B $(BUILDDIR) \
 		-b html5 \
 		-a docinfo=shared \
 		-a linkcss \
