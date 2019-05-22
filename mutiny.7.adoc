@@ -6,7 +6,6 @@ Kylie J. McClain <kylie@somas.is>
 :sectlinks:
 :sectanchors:
 :idprefix:
-:notitle:
 
 :pp: ++
 
