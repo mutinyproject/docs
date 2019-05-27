@@ -115,8 +115,8 @@ Where we can best improve this is in the administration of a system.
 
 === Recommended reading
 
-* {openbsd}/goals.html[OpenBSD's project goals]
-* {openbsd}/policy.html[OpenBSD's copyright policy]
+* https://www.openbsd.org/goals.html[OpenBSD's project goals]
+* https://www.openbsd.org/policy.html[OpenBSD's copyright policy]
 * https://www.youtube.com/watch?v=SGmtP5Lg_t0[Rob Landley at the Embedded Linux Conference 2013, discussing `toybox`]
 * https://www.youtube.com/watch?v=04XwAbtPmAg[Rob Landley at the Embedded Linux Conference 2015, more `toybox` discussion]
 * https://archive.org/details/OhioLinuxfest2013/24-Rob_Landley-The_Rise_and_Fall_of_Copyleft.flac[Rob Landley at Ohio LinuxFest 2013]
