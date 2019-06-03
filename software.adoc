@@ -15,6 +15,10 @@ Kylie J. McClain <kylie@somas.is>
   different. `vixie-cron` is old as hell (and not properly public domain as Vixie himself claims),
   `cronie` is being consumed by the GPL, `slicd` is better but GPL-3.0, so it seems our choices are
   slim.
+    ** https://github.com/leahneukirchen/snooze[snooze] by Leah Neukirchen could be a good
+       candidate. I think that could go really well with commune, perhaps having some sort of
+       `commune snooze` scope to integrate with it. It's not a daemon, but their intended method of
+       using `snooze` is to use it with a supervisor like `runit` (or, in our case, `s6`).
 
 == Desktop
 * https://sourceforge.net/projects/acpid2[acpid] - not as extensive as i'd like; something like a
