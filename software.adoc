@@ -7,13 +7,29 @@ Kylie J. McClain <kylie@somas.is>
 :sectanchors:
 :idprefix:
 
-* https://github.com/Airblader/unclutter-xfixes[unclutter-xfixes]
-* https://bitbucket.org/raymonad/xss-lock[xss-lock]
-* https://github.com/google/xsecurelock[xsecurelock]
-* https://sourceforge.net/projects/acpid2[acpid]
+== Daemons
+* https://git.2f30.org/scron[scron] - I like that it doesn't come with many features, and the lack
+  of spool directory. having crontabs managed by users and ran with their `commune user` instances
+  seems like it makes more sense to me than it does to have a central daemon doing it. However,
+  scron seems almost unmaintained, it has somewhat ugly documentation, and I'd prefer something
+  different. `vixie-cron` is old as hell (and not properly public domain as Vixie himself claims),
+  `cronie` is being consumed by the GPL, `slicd` is better but GPL-3.0, so it seems our choices are
+  slim.
+
+== Desktop
+* https://sourceforge.net/projects/acpid2[acpid] - not as extensive as i'd like; something like a
+  real power manager type thing akin the power managers that come with MATE, GNOME, Xfce, and so on
+  would be really nice
 * https://github.com/troglobit/xplugd[xplugd]
-* https://www.passwordstore.org/[password-store] - something without a dependency on bash would be
-  nicer though
+* https://bitbucket.org/raymonad/xss-lock[xss-lock]
+* https://github.com/Airblader/unclutter-xfixes[unclutter-xfixes]
 * https://github.com/DaveDavenport/rofi[rofi]
+* https://github.com/maandree/adjbacklight[adjbacklight]
 * https://github.com/dunst-project/dunst[dunst] - a non-python alike would be nicer though...
+* https://github.com/google/xsecurelock[xsecurelock]
+
+== Misc
+* https://www.passwordstore.org/[password-store] - something without a dependency on bash would be
+  nicer though; there *are* some reimplementations/workalikes like https://github.com/nmeum/tpm[tpm]
+  and https://notabug.org/kl3/spm[spm] are regular sh, but they lack a lot of features and niceities
 * browser...?
