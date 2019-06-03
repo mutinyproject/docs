@@ -182,7 +182,7 @@ found on the <<software.adoc#,software page>>.
     /run            - Runtime files (non-persistent), such as... (tmpfs)
         /run/tmp        - Temporary files
         /run/user       - User runtime directories
-            /run/user/<uid> - User's XDG_RUNTIME_DIR, created by `commune-session`
+            /run/user/<uid>     - User's XDG_RUNTIME_DIR, created by PAM on user login.
     /proc           - Process information (procfs)
     /sbin               - Link to host/sbin
     /share          - Documentation, other resources
