@@ -160,54 +160,59 @@ found on the <<software.adoc#,software page>>.
 
 === Filesystem layout
 
-```text
-/   - Also the root user's home directory.
-    /bin                - Link to host/bin
-    /dev                - Device files (devtmpfs)
-    /etc                - System-localized configuration
-    /home               - User files
-    /host -> ${CHOST}   - Symlink to default CHOST
-    /lib                - Link to host/lib
-    /lib64              - Link to host/lib64               - Only on x86_64 hosts
-    /local              - System-localized files (not managed by packages)
-        /local/bin      - Link to ../host/local/bin
-        /local/include  - Link to ../host/local/include
-        /local/lib      - Link to ../host/local/lib
-        /local/share    - User-managed resources. (separate, not architecture-specific)
-        /local/sbin     - Link to ../host/local/sbin
-    /media              - Link to mnt
-    /mnt                - Mounted devices
-    /run            - Runtime files (non-persistent), such as... (tmpfs)
-        /run/tmp        - Temporary files
-        /run/user       - User runtime directories
-            /run/user/<uid>     - User's XDG_RUNTIME_DIR, created by PAM on user login.
-    /proc           - Process information (procfs)
-    /sbin               - Link to host/sbin
-    /share          - Documentation, other resources
-        /share/factory  - Default configuration files
-        /share/man      - Manual pages (man)
-    /src            - Source (kernel things, usually)
-        /src/praxis     - Source for packages built by praxis
-    /srv            - Service data (httpd, git-daemon)
-    /sys            - System/kernel information (sysfs)
-    /usr                - Link to .
-    /tmp            - Link to run/tmp
-    /var            - Persistent system data (for daemons and system programs)
-        /var/cache      - Cache for system programs
-        /var/log        - Log files for system programs
-        /var/lib        - Databases and other data for system programs
-        /var/run        - Link to ../run
-        /var/spool      - Spools maintained by certain daemons (mail, crond, cupsd, etc)
-        /var/tmp        - Persistent yet temporary files, not cleared at boot
-    /${CHOST}   - Directories containing ${CHOST}-only files (bins/libs)
-        /bin            - Binaries
-        /include        - Header files for compiled programs
-        /lib            - Libraries, internal binaries for other programs
-        /local          - System-localized files, not managed or otherwise modified by praxis
-            /local/bin      - User-managed binaries
-            /local/include  - User-managed header files
-            /local/lib      - User-managed libraries, internal binaries
+In the Mutiny layout, there are a few goals:
+
+* Accomodate some common paths; `#!/bin/sh`, etc.
+* Remove redundancy. No more `/media` or `/usr`.
+* Embrace the _good_ innovations that have occurred, like `/run` and the `/sbin`+`/bin` merge.
+
 ```
+/                           - The root, and root user's home directory.
+├── bin                     - System-managed binary files.
+├── dev                     - Device files (devtmpfs).
+├── etc                     - System-localized configuration.
+├── home                    - User files.
+├── include                 - System-managed header files.
+├── lib                     - System-managed library files.
+├── local
+│   ├── bin                 - User-managed binary files.
+│   ├── include             - User-managed header files.
+│   ├── lib                 - User-managed library files.
+│   └── share               - User managed resource files.
+│       └── man             - User-managed manual pages.
+├── mnt                     - Mounted devices and mountpoints.
+├── mutiny                  - Distro
+
+├── proc                    - Process information (procfs).
+├── run                     - Runtime files (tmpfs, directory structure created at boot).
+│   ├── tmp                 - Temporary files (cleared at boot).
+│   └── user                - User runtime files.
+│       └── 1000            - User's `$XDG_RUNTIME_DIR` (created at login).
+│           └── commune     - User's `commune` supervision trees.
+│               ├── user    - Corresponds to `commune-user`, s6 tree for user's session.
+│               └── xinit   - Corresponds to `commune-xinit`, s6 tree for Xorg session.
+├── sbin                    - Symbolic link to `bin`.
+├── share                   - Managed resource files.
+│   └── man                 - System manual pages.
+├── srv                     - Service directories. (git-daemon, httpd)
+│   ├── git
+│   └── http
+├── sys                     - System/kernel information (sysfs).
+├── tmp                     - Symbolic link to `run/tmp`.
+├── usr                     - Symbolic link to `.`.
+└── var                     - Persistent system data.
+    ├── cache               - Cache for system programs.
+    │   └── praxis
+            └── distfiles   - Downloaded source for packages.
+    ├── lib                 - Log files for system programs.
+    ├── log                 - Databases and other data for system programs.
+    ├── run                 - Symbolic link to `../run`.
+    └── tmp                 - Persistent yet temporary files, not cleared at boot.
+```
+
+At one point, there was an intent to support cross-compilation, akin to Exherbo's multiarch design.
+This has been removed due to a lack of necessity and ultimately, little gain for a lot of pain to
+take on.
 
 == Package design
 
