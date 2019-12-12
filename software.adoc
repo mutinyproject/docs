@@ -8,7 +8,7 @@ Kylie J. McClain <kylie@somas.is>
 :idprefix:
 
 == Daemons
-** https://github.com/leahneukirchen/snooze[snooze] by Leah Neukirchen could be a good
+* https://github.com/leahneukirchen/snooze[snooze] by Leah Neukirchen could be a good
    candidate for a cron replacement. I think that could go really well with commune, perhaps
    having some sort of `commune snooze` scope to integrate with it. It's not a daemon, but their
    intended method of using `snooze` is to use it with a supervisor like `runit` (or, in our case,
