@@ -120,6 +120,7 @@ Where we can best improve this is in the administration of a system.
 * https://www.youtube.com/watch?v=04XwAbtPmAg[Rob Landley at the Embedded Linux Conference 2015, more `toybox` discussion]
 * https://archive.org/details/OhioLinuxfest2013/24-Rob_Landley-The_Rise_and_Fall_of_Copyleft.flac[Rob Landley at Ohio LinuxFest 2013]
 * http://hyperland.com/TedCompOneLiners[Ted Nelson's Computer Paradigm]
+* https://blog.flowblok.id.au/2013-02/shell-startup-scripts.html[Shell startup scripts]
 
 == System
 
