@@ -7,6 +7,11 @@ Kylie J. McClain <kylie@somas.is>
 :sectanchors:
 :idprefix:
 
+== System
+* https://github.com/emersion/mrsh[mrsh] might be interesting to look into. "a minimal POSIX shell",
+aiming to be both a simple POSIX compliant shell with a library for more on top of it-
+* https://adi.tilde.institute/pp/[pp] is a pretty cool pre-processor for files.
+
 == Daemons
 * https://github.com/leahneukirchen/snooze[snooze] by Leah Neukirchen could be a good
    candidate for a cron replacement. I think that could go really well with commune, perhaps
