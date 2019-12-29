@@ -183,8 +183,6 @@ In the Mutiny layout, there are a few goals:
 │   └── share               - User managed resource files.
 │       └── man             - User-managed manual pages.
 ├── mnt                     - Mounted devices and mountpoints.
-├── mutiny                  - Distro
-
 ├── proc                    - Process information (procfs).
 ├── run                     - Runtime files (tmpfs, directory structure created at boot).
 │   ├── tmp                 - Temporary files (cleared at boot).
