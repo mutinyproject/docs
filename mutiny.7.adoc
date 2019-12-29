@@ -165,7 +165,7 @@ found on the <<software.adoc#,software page>>.
 In the Mutiny layout, there are a few goals:
 
 * Accomodate some common paths; `#!/bin/sh`, etc.
-* Remove redundancy. No more `/media` or `/usr`.
+* Remove redundancy. No more `/media` or `/usr`, `/tmp` points to `/run/tmp`.
 * Embrace the _good_ innovations that have occurred, like `/run` and the `/sbin`+`/bin` merge.
 
 ```
