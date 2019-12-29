@@ -205,7 +205,7 @@ In the Mutiny layout, there are a few goals:
 └── var                     - Persistent system data.
     ├── cache               - Cache for system programs.
     │   └── praxis
-            └── distfiles   - Downloaded source for packages.
+    │       └── distfiles   - Downloaded source for packages.
     ├── lib                 - Log files for system programs.
     ├── log                 - Databases and other data for system programs.
     ├── run                 - Symbolic link to `../run`.
