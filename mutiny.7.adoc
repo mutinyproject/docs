@@ -82,8 +82,6 @@ On a large scale, this unity in the system is what Mutiny is striving for. Linux
 tendency to be disjointed at times, as the model which the system is developed in doesn't usually
 correspond to the stewardship that comes with the tightly-managed attitude of something like OpenBSD.
 
-Where we can best improve this is in the administration of a system.
-
 == Prior art
 
 * https://www.exherbo.org[Exherbo Linux] - My former distribution of choice, helped me realize the
