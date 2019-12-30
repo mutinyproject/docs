@@ -110,10 +110,7 @@ correspond to the stewardship that comes with the tightly-managed attitude of so
 :gnu:       https://www.gnu.org/software
 :oil-shell: https://www.oilshell.org
 
-.Software
-* Prefer software with less legacy.
-* Slim software whenever it is possible.
-* Packages
+* Software
     ** Base
         *** https://www.musl-libc.org[`musl`]
         *** http://www.landley.net/toybox/[`toybox`]
@@ -131,7 +128,7 @@ correspond to the stewardship that comes with the tightly-managed attitude of so
         *** https://www.libressl.org[`libressl`]
         *** http://mandoc.bsd.lv[`mandoc`]
     ** Toolchain
-        *** https://git.2f30.org/fortify-headers/[`fortify-headers`]
+        *** https://git.2f30.org/fortify-headers[`fortify-headers`]
         *** https://clang.llvm.org[`clang`]
         *** https://libcxx.llvm.org[`libc{pp}`]
         *** http://invisible-island.net/byacc/byacc.html[`byacc`]
@@ -160,7 +157,7 @@ In the Mutiny layout, there are a few goals:
 ```
 /                           - The root, and root user's home directory.
 ├── bin                     - System-managed binary files.
-├── dev                     - Device files (devtmpfs).
+├── dev                     - Device files. (devtmpfs)
 ├── etc                     - System-localized configuration.
 ├── home                    - User files.
 ├── include                 - System-managed header files.
@@ -171,10 +168,11 @@ In the Mutiny layout, there are a few goals:
 │   ├── lib                 - User-managed library files.
 │   └── share               - User managed resource files.
 │       └── man             - User-managed manual pages.
+│
 ├── mnt                     - Mounted devices and mountpoints.
-├── proc                    - Process information (procfs).
-├── run                     - Runtime files (tmpfs, directory structure created at boot).
-│   ├── tmp                 - Temporary files (cleared at boot).
+├── proc                    - Process information. (procfs)
+├── run                     - Runtime files. (tmpfs, directory structure created at boot)
+│   ├── tmp                 - Temporary files. (cleared at boot)
 │   └── user                - User runtime files.
 │       └── 1000            - User's `$XDG_RUNTIME_DIR`. (created at login)
 │           └── commune     - User's supervision trees, maintained by `commune` scopes.
@@ -184,19 +182,23 @@ In the Mutiny layout, there are a few goals:
 │               │             Maintained by `commune-user`.
 │               └── xinit   - Corresponds to the running supervision tree for the user's Xorg
 │                             session. Maintained by `commune-xinit`.
+│
 ├── sbin                    - Symbolic link to `bin`.
 ├── share                   - Managed resource files.
 │   └── man                 - System manual pages.
+│
 ├── srv                     - Service directories. (git-daemon, httpd)
 │   ├── git
 │   └── http
-├── sys                     - System/kernel information (sysfs).
+│
+├── sys                     - System/kernel information. (sysfs)
 ├── tmp                     - Symbolic link to `run/tmp`.
 ├── usr                     - Symbolic link to `.`.
 └── var                     - Persistent system data.
     ├── cache               - Cache for system programs.
     │   └── praxis
     │       └── distfiles   - Downloaded source for packages.
+    │
     ├── lib                 - Log files for system programs.
     ├── log                 - Databases and other data for system programs.
     ├── run                 - Symbolic link to `../run`.
