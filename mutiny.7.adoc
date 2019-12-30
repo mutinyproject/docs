@@ -1,5 +1,4 @@
 = mutiny(7)
-Kylie J. McClain <kylie@somas.is>
 :description: Details, overview, and other notes about the design of a Mutiny system.
 :toc: right
 :toclevels: 4
