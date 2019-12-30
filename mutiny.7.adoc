@@ -14,11 +14,10 @@ image::logo.svg[Mutiny logo]
 Mutiny is a young project! If you find the ideas here interesting, please reach out at
 link:irc://irc.freenode.net/mutiny[#\mutiny@irc.freenode.net].
 
-There's a set of https://git.somas.is/mutiny/[git repositories] with some small repositories up on
-it. No bootable system yet, this OS mostly exists as a pile of documents and some broken chroots for
-now.
+There's a set of https://git.somas.is/mutiny/[git repositories]. No bootable system yet, this OS
+mostly exists as a pile of documents and some broken chroots for now.
 
-There's a few other documents written currently:
+This is the main document, here's a few other documents written currently:
 
 * A short design document about <<praxis-design.7.adoc#,praxis>>, the package manager.
 * A longer but unfinished document about the package API, <<theory.7.adoc#,theory>>.
@@ -33,26 +32,10 @@ thinking choices, and fun computing
 
 == Synopsis
 
-Mutiny is a project inspired by multiple different Linux distributions, software made in response to
-system hegemony, embedded systems, interest in BSD-styles of design, and an interest in
-forward-thinking system design. Systems can be integrated, be well put together, and allow for
-deviance.
-
-Systems should carry as little legacy, and give as little bend to the popular software and
-development groups as possible. Open standards exist for this very reason, to give us the ability to
-create diversity in the computer world while preserving the ability to maintain a level of
-interoperability with systems of other origin, ideology, and reason.
-
-Decentralize. Using software from one development group means you become beholden to the interests
-of that group, and it promotes vendor lock-in; the clearest example of this would be how much the
-state of the Unix desktop and server has changed because of the choices that GNOME, RedHat, etc.
-have made.
-
-We live in a time where systems are changing rapidly, and the possibilities of system design are
-changing in new exciting ways. Mutiny is a response to this, an attempt to carry out the perfect
-concept of a modern Unix system with attention paid at every level.
-
-Aim to support any use case worth supporting: desktop, server, small devices, containers.
+Mutiny is a project aiming to deliver a Linux distribution that prioritizes a consistent,
+interesting, and fun to use system. Influenced heavily by minimalist software and and an interest in
+forward-thinking system design, Mutiny aims to explore alternatives to the hegemony and monotony
+that makes up most Linux distributions.
 
 == Philosophy
 
@@ -63,11 +46,12 @@ This section will outline the intent and approach to design that Mutiny aims to 
 * **Consistency**: Unix systems have suffered from a large amount of inconsistencies
   in maintenance and style in the past decades. Software should be bent to conform, and
   users should come to expect things are going to be a certain way on a Mutiny system.
+* **Alternatives**: In the Linux world there is often an acceptance that some of the system just
+  sucks, and it's just what we're stuck with. And that's reasonable in some cases where alternatives
+  don't exist. However, Mutiny should aim to explore, thoroughly, alternatives.
 * **Documentation**: The system should be thoroughly documented so that you never need to
   reference external websites in order to learn about it. Documentation should be consistent,
   too. This means all documentation should be accessible through `man` or `/usr/share/doc`.
-* **Security**: Mutiny should strive for secure design. We should be proactive and use hardening
-  measures when possible, through `FORTIFY_SOURCE`, kernel hardening, and other measures.
 
 === Standards adherence
 
