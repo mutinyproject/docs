@@ -131,7 +131,6 @@ correspond to the stewardship that comes with the tightly-managed attitude of so
         *** https://git.2f30.org/fortify-headers[`fortify-headers`]
         *** https://clang.llvm.org[`clang`]
         *** https://libcxx.llvm.org[`libc{pp}`]
-        *** http://invisible-island.net/byacc/byacc.html[`byacc`]
         *** https://github.com/sabotage-linux/gettext-tiny[`gettext-tiny`]
 
 Nonessential but otherwise interesting software that would be a good fit to the philosophy can be
