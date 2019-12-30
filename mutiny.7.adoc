@@ -251,15 +251,15 @@ be worth looking at.
 
 === s6 based stuff
 
-In Mutiny, a goal should be to have the same software powering many scopes of the system this
+In Mutiny, a goal should be to have the same software powering many scopes of the system. This
 promotes the ability to have an intimate familiarity with the foundation of your system, and thus an
 easier introduction to administrating it and doing cool stuff with it. A really good point in which
 this can be carried out is in `s6` and `s6-rc`.
 
 I have a work in progress implementation of doing this at the `xinit` level, since it's definitely
 possible to do a supervisor as your session manager for Xorg sessions. Furthermore, this should be
-able to be carried up to the login level. (call it `commune-session`, maybe) This could mean user
-services for users on the system, perhaps akin to systemd's user scope...
+able to be carried up to the login level. (call it `commune-user`) This could mean user services
+for users on the system, akin to systemd's user scope...
 
 === Software contortions
 
