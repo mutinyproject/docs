@@ -105,6 +105,7 @@ correspond to the stewardship that comes with the tightly-managed attitude of so
 
 == System
 
+:github:    https://github.com
 :skarnet:   https://skarnet.org/software
 :gnu:       https://www.gnu.org/software
 :oil-shell: https://www.oilshell.org
@@ -115,13 +116,20 @@ correspond to the stewardship that comes with the tightly-managed attitude of so
 * Packages
     ** Base
         *** https://www.musl-libc.org[`musl`]
-        *** https://www.libressl.org[`libressl`]
-        *** http://mandoc.bsd.lv[`mandoc`]
         *** http://www.landley.net/toybox/[`toybox`]
             **** https://www.busybox.net[`busybox`] to fill in the cracks, temporarily
         *** https://www.mirbsd.org/mksh.htm[`mksh`]
-            **** The long-term plan is to switch to the {oil-shell}[Oil shell] once it is fully functional
-        *** {skarnet}/s6[`s6`], {skarnet}/s6-rc[`s6-rc`]
+            **** The long-term plan is to switch to the {oil-shell}[Oil shell] once it is fully
+                 functional.
+            **** This is to be decided, however; {github}/emersion/mrsh[mrsh] may also be looked
+                 into, though it lacks arrays and likely won't ever have them since they aren't part
+                 of POSIX.
+        *** {skarnet}/execline[`execline`] for system automation
+        *** {skarnet}/s6[`s6`] and {skarnet}/s6-rc[`s6-rc`] for system initialization and supervision
+        *** {github}/leahneukirchen/snooze[`snooze`] for job scheduling
+        *** {skarnet}/mdevd[`mdevd`] for device handling, firmware loading
+        *** https://www.libressl.org[`libressl`]
+        *** http://mandoc.bsd.lv[`mandoc`]
     ** Toolchain
         *** https://git.2f30.org/fortify-headers/[`fortify-headers`]
         *** https://clang.llvm.org[`clang`]
@@ -137,7 +145,7 @@ found on the <<software.adoc#,software page>>.
 * <<praxis-design.7.adoc#,`praxis`>> - a source-based package manager
 * `synonym` - a utility for managing alternatives
 * `commune` - utilities for working with the `s6` and `s6-rc` state manager with Mutiny policy
-    ** `commune-session` - manages the login/logout actions for a user (cf. `systemd-logind`)
+    ** `commune-snooze` - manages scheduled jobs at the system and user scope
     ** `commune-user` - manages the user’s services and states (cf. `systemd --user`)
     ** `commune-xinit` - manages the user’s Xorg session
 
@@ -168,10 +176,14 @@ In the Mutiny layout, there are a few goals:
 ├── run                     - Runtime files (tmpfs, directory structure created at boot).
 │   ├── tmp                 - Temporary files (cleared at boot).
 │   └── user                - User runtime files.
-│       └── 1000            - User's `$XDG_RUNTIME_DIR` (created at login).
-│           └── commune     - User's `commune` supervision trees.
-│               ├── user    - Corresponds to `commune-user`, s6 tree for user's session.
-│               └── xinit   - Corresponds to `commune-xinit`, s6 tree for Xorg session.
+│       └── 1000            - User's `$XDG_RUNTIME_DIR`. (created at login)
+│           └── commune     - User's supervision trees, maintained by `commune` scopes.
+│               ├── snooze  - Corresponds to the running supervision tree for user's jobs.
+│               │             Maintained by `commune-snooze`.
+│               ├── user    - Corresponds to the running supervision tree for the user.
+│               │             Maintained by `commune-user`.
+│               └── xinit   - Corresponds to the running supervision tree for the user's Xorg
+│                             session. Maintained by `commune-xinit`.
 ├── sbin                    - Symbolic link to `bin`.
 ├── share                   - Managed resource files.
 │   └── man                 - System manual pages.
