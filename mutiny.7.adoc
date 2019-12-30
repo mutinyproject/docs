@@ -263,10 +263,6 @@ for users on the system, akin to systemd's user scope...
 
 === Software contortions
 
-* GNOME software
-    ** https://unix.stackexchange.com/a/426348[dconf's plain text configuration method]
-    ** https://developer.gnome.org/gio/stable/GSettingsBackend.html#g-keyfile-settings-backend-new[gsettings' "keyfile" backend]
-    *** `GSETTINGS_BACKEND=keyfile`
-    *** https://developer.gnome.org/gio/stable/GSettingsBackend.html#g-settings-backend-get-default["It is possible to override the default by setting the GSETTINGS_BACKEND environment variable to the name of a settings backend."]
 * XDG contortions
     ** https://wiki.archlinux.org/index.php/XDG_Base_Directory#Partial[lots of software can be told to use XDG if you just give them the right variables]
+    ** should software distributed by us be patched to use XDG?
