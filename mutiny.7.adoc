@@ -102,6 +102,7 @@ correspond to the stewardship that comes with the tightly-managed attitude of so
 * https://archive.org/details/OhioLinuxfest2013/24-Rob_Landley-The_Rise_and_Fall_of_Copyleft.flac[Rob Landley at Ohio LinuxFest 2013]
 * http://hyperland.com/TedCompOneLiners[Ted Nelson's Computer Paradigm]
 * https://blog.flowblok.id.au/2013-02/shell-startup-scripts.html[Shell startup scripts]
+* https://tonsky.me/blog/disenchantment[Software Disenchantment]
 
 == System
 
