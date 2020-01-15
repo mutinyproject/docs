@@ -17,10 +17,13 @@ Kylie J. McClain <kylie@somas.is>
 * browser...?
 
 == Desktop
+* https://github.com/baskerville/bspwm[bspwm] - tiling window manager using binary space
+  partitioning, controlled via a socket-based command line program
+* https://github.com/baskerville/sxhkd[sxhkd] - Xorg hotkey daemon with a powerful configuration
+  syntax, mouse chording, works very well with bspwm
 * https://github.com/TomaszGasior/gtk3-mushrooms[gtk3-mushrooms] - patches for gtk3 that make it
   nicer for non GNOME desktops. no CSD, client side shadows, and so on. though, maybe it'd be nicer
   to just avoid gtk3, if we can't do it without dbus...
-
 * https://sourceforge.net/projects/acpid2[acpid] - not as extensive as i'd like; something like a
   real power manager type thing akin the power managers that come with MATE, GNOME, Xfce, and so on
   would be really nice
