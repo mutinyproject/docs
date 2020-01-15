@@ -10,6 +10,12 @@ Kylie J. McClain <kylie@somas.is>
 == System
 * https://adi.tilde.institute/pp/[pp] is a pretty cool pre-processor for files.
 
+== Networking
+* https://github.com/troglobit/mdnsd[mdnsd] - multicast daemon for announcing services
+* https://github.com/ddevault/aerc[aerc] - terminal mail client that doesn't suck to setup anywhere
+  near as much as mutt
+* browser...?
+
 == Desktop
 * https://github.com/TomaszGasior/gtk3-mushrooms[gtk3-mushrooms] - patches for gtk3 that make it
   nicer for non GNOME desktops. no CSD, client side shadows, and so on. though, maybe it'd be nicer
@@ -32,4 +38,3 @@ Kylie J. McClain <kylie@somas.is>
   and https://notabug.org/kl3/spm[spm] are regular sh, but they lack a lot of features and
   niceities.
     ** https://github.com/dylanaraps/pash[pash] - appears to be more in line with what I want
-* browser...?
