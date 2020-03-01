@@ -1,0 +1,23 @@
+environment:
+    deploy: deploy@somas.is
+
+image: alpine/latest
+
+secrets:
+    - 661c57e5-ee95-4872-925d-d4b0d940ee38
+
+sources:
+    - https://github.com/mutinyproject/docs
+
+packages:
+    - asciidoctor
+    - rsync
+
+tasks:
+    - build: |
+        cd docs
+        make html
+    - deploy: |
+        cd docs
+        make deploy IMAGE="${PWD}/image"
+        rsync --rsh="ssh -o StrictHostKeyChecking=no" -vrl image/ ${deploy}:/srv/www/mutiny.zone
