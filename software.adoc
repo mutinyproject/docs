@@ -8,7 +8,7 @@ Kylie J. McClain <kylie@somas.is>
 :idprefix:
 
 == System
-* https://adi.tilde.institute/pp/[pp] is a pretty cool pre-processor for files.
+* https://mkws.sh/pp.html[pp] is a pretty cool pre-processor for files.
 
 == Networking
 * https://github.com/troglobit/mdnsd[mdnsd] - multicast daemon for announcing services
