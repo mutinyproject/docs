@@ -128,9 +128,20 @@ correspond to the stewardship that comes with the tightly-managed attitude of so
         *** https://www.libressl.org[`libressl`]
         *** http://mandoc.bsd.lv[`mandoc`]
     ** Toolchain
+        *** LLVM is currently being reconsidered in favor of the usual GNU toolchain.
+            footnote:[LLVM as a project seems to be suffering from lots of feature creep and could do
+            with some new maintainership and less influence from Google. Notably,
+            https://lists.llvm.org/pipermail/llvm-dev/2019-June/133308.html[they are looking into
+            creating their own libc written in C++ for whatever reason]. A project with goals like
+            this carrying a lot of baggage I'm really not interested in involving with my project.
+            Aside from that, using LLVM, while one of my initial hopes for Mutiny, has proven over
+            time to also be one of the main reasons it has stagnated attempt after attempt. This is
+            pretty disappointing to me as I had really hoped to be one of the first distributions made
+            with a completely non-GNU toolchain.]
+
+            **** https://clang.llvm.org/[`clang`]
+            **** https://libcxx.llvm.org[`libc{pp}`]
         *** https://git.2f30.org/fortify-headers[`fortify-headers`]
-        *** https://clang.llvm.org[`clang`]
-        *** https://libcxx.llvm.org[`libc{pp}`]
         *** https://github.com/sabotage-linux/gettext-tiny[`gettext-tiny`]
 
 Nonessential but otherwise interesting software that would be a good fit to the philosophy can be
