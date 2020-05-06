@@ -132,8 +132,8 @@ correspond to the stewardship that comes with the tightly-managed attitude of so
             footnote:[LLVM as a project seems to be suffering from lots of feature creep and could do
             with some new maintainership and less influence from Google. Notably,
             https://lists.llvm.org/pipermail/llvm-dev/2019-June/133308.html[they are looking into
-            creating their own libc written in C++ for whatever reason]. A project with goals like
-            this carrying a lot of baggage I'm really not interested in involving with my project.
+            creating their own libc written in C++ for whatever reason]. LLVM seems to be a project
+            carrying a lot of baggage that I'm really not interested in involving with my project.
             Aside from that, using LLVM, while one of my initial hopes for Mutiny, has proven over
             time to also be one of the main reasons it has stagnated attempt after attempt. This is
             pretty disappointing to me as I had really hoped to be one of the first distributions made
