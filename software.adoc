@@ -20,7 +20,12 @@ Kylie J. McClain <kylie@somas.is>
 * https://github.com/troglobit/mdnsd[mdnsd] - multicast daemon for announcing services
 * https://github.com/ddevault/aerc[aerc] - terminal mail client that doesn't suck to setup anywhere
   near as much as mutt
-* browser...?
+* https://git.causal.agency/pounce[pounce] - TLS-only IRC bouncer with great multi-client
+  functionality, pairs well with...
+* https://git.causal.agency/catgirl[catgirl] - TLS-only IRC client with a good set of features
+  and great IRCv3 support
+* https://git.causal.agency/litterbox[litterbox] - TLS-only IRC logger that utilizes sqlite, allows
+  for expressive search syntax via `/query`ing yourself
 
 == Desktop
 * https://github.com/baskerville/bspwm[bspwm] - tiling window manager using binary space
