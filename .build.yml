@@ -7,7 +7,7 @@ secrets:
     - 661c57e5-ee95-4872-925d-d4b0d940ee38
 
 sources:
-    - https://github.com/mutinyproject/docs
+    - https://git.sr.ht/~somasis/mutiny-docs
 
 packages:
     - asciidoctor
