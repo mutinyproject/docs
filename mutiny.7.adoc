@@ -258,7 +258,7 @@ be worth looking at.
 
 * https://mandoc.bsd.lv/docbook2mdoc[`docbook2mdoc`]
 * https://mandoc.bsd.lv/pod2mdoc[`pod2mdoc`]
-* http://mandoc.bsd.lv/texi2mdoc[`texi2mdoc`]
+* https://mandoc.bsd.lv/texi2mdoc[`texi2mdoc`]
 
 === s6 based stuff
 
