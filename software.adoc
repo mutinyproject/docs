@@ -26,6 +26,10 @@ Kylie J. McClain <kylie@somas.is>
   and great IRCv3 support
 * https://git.causal.agency/litterbox[litterbox] - TLS-only IRC logger that utilizes sqlite, allows
   for expressive search syntax via `/query`ing yourself
+* Web browsing
+    ** https://www.qutebrowser.org[qutebrowser] - Qt5 and WebKit based browser. keyboard driven,
+       takes some getting used to but definitely looks like one of the most promising minimalistic
+       browser projects out there
 
 == Desktop
 * https://github.com/baskerville/bspwm[bspwm] - tiling window manager using binary space
