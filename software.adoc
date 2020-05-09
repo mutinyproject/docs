@@ -8,6 +8,12 @@ Kylie J. McClain <kylie@somas.is>
 :idprefix:
 
 == System
+* https://sr.ht/~mcf/libtls-bearssl[libtls-bearssl] is an implementation of libtls using
+  https://bearssl.org[BearSSL], one of the most promising SSL libraries in recent times.
+* https://github.com/michaelforney/samurai[samurai] is an alternative implementation of `ninja`,
+  which will be used instead of `ninja` in Mutiny.
+* https://git.sr.ht/~mcf/cproc[cproc] is a C compiler using https://c9x.me/compile/[QBE] as the
+  backend; it could be really compelling to base Mutiny around once it can build the kernel.
 * https://mkws.sh/pp.html[pp] is a pretty cool pre-processor for files.
 
 == Networking
