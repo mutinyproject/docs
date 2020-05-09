@@ -38,16 +38,17 @@ Kylie J. McClain <kylie@somas.is>
   syntax, mouse chording, works very well with bspwm
 * https://github.com/TomaszGasior/gtk3-mushrooms[gtk3-mushrooms] - patches for gtk3 that make it
   nicer for non GNOME desktops. no CSD, client side shadows, and so on. though, maybe it'd be nicer
-  to just avoid gtk3, if we can't do it without dbus...
+  to just avoid gtk3, if we can't do it without dbus... or just to prefer Qt5.
 * https://sourceforge.net/projects/acpid2[acpid] - not as extensive as i'd like; something like a
-  real power manager type thing akin the power managers that come with MATE, GNOME, Xfce, and so on
-  would be really nice
+  real power manager that has the ability to react per-user to power events would be more
+  compelling. unless maybe acpid can be scripted to act that way?
 * https://github.com/troglobit/xplugd[xplugd]
 * https://bitbucket.org/raymonad/xss-lock[xss-lock]
 * https://github.com/Airblader/unclutter-xfixes[unclutter-xfixes]
-* https://github.com/DaveDavenport/rofi[rofi]
+* https://github.com/DaveDavenport/rofi[rofi] - pretty bloated, but a great deal more useful than
+  dmenu.
 * https://github.com/maandree/adjbacklight[adjbacklight]
-* https://github.com/dunst-project/dunst[dunst] - a non-python alike would be nicer though...
+* https://github.com/dunst-project/dunst[dunst]
 * https://github.com/google/xsecurelock[xsecurelock]
 
 == Misc
@@ -55,4 +56,5 @@ Kylie J. McClain <kylie@somas.is>
   nicer though; there *are* some reimplementations/workalikes like https://github.com/nmeum/tpm[tpm]
   and https://notabug.org/kl3/spm[spm] are regular sh, but they lack a lot of features and
   niceities.
-    ** https://github.com/dylanaraps/pash[pash] - appears to be more in line with what I want
+    ** https://github.com/dylanaraps/pash[pash] - appears to be more in line with what I want.
+       configuration seems kinda odd, though.
