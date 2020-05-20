@@ -20,4 +20,4 @@ tasks:
     - deploy: |
         cd docs
         make deploy IMAGE="${PWD}/image"
-        rsync --rsh="ssh -o StrictHostKeyChecking=no" -vrl image/ ${deploy}:/srv/www/mutiny.zone
+        rsync --rsh="ssh -o StrictHostKeyChecking=no" -vrl image/ ${deploy}:/srv/www/mutiny.red
