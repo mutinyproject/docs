@@ -112,11 +112,12 @@ OpenBSD.
             **** {github}/emersion/mrsh[`mrsh`] may also be looked into, though it lacks arrays and
                  likely won't ever have them since they aren't part of POSIX.
         *** {skarnet}/execline[`execline`] for system automation
-        *** {skarnet}/s6[`s6`] and {skarnet}/s6-rc[`s6-rc`] for system initialization and supervision
+        *** {skarnet}/s6[`s6`] and {skarnet}/s6-rc[`s6-rc`] for system initialization and
+            supervision
         *** {github}/leahneukirchen/snooze[`snooze`] for job scheduling
         *** {skarnet}/mdevd[`mdevd`] for device handling, firmware loading
         *** https://www.libressl.org[`libressl`]
-        *** http://mandoc.bsd.lv[`mandoc`]
+        *** https://mandoc.bsd.lv[`mandoc`]
     ** Toolchain
         *** LLVM is currently being reconsidered in favor of the usual GNU toolchain.
             footnote:[LLVM as a project seems to be suffering from lots of feature creep and could do
@@ -151,8 +152,8 @@ found on the <<software.adoc#,software page>>.
 In the Mutiny layout, there are a few goals:
 
 * Accomodate some common paths; `#!/bin/sh`, etc.
-* Remove redundancy. No more `/media` or `/usr`, `/tmp` points to `/run/tmp`.
 * Embrace the _good_ innovations that have occurred, like `/run` and the `/sbin`+`/bin` merge.
+* Remove redundancy. No more `/media` or `/usr`, `/tmp` points to `/run/tmp`.
 
 ```
 /                           - The root, and root user's home directory.
