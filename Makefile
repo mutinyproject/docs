@@ -18,7 +18,8 @@ ASCIIDOCTOR_FLAGS += -a toc=left
 ASCIIDOCTOR_FLAGS += -a stylesheet=style.css
 
 AUXS = \
-    logo.svg
+    logo.svg \
+    style.css
 
 MAN7 = \
     mutiny.7 \
