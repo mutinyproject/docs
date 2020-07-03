@@ -20,7 +20,7 @@ image::logo.svg[Mutiny logo]
 Mutiny is a young project! If you find the ideas here interesting, please reach out at
 irc://irc.freenode.net/#mutiny.
 
-There's a set of https://github.com/mutinyproject[git repositories]. No bootable system yet, this OS
+There's a set of https://git.mutiny.red/mutiny[git repositories]. No bootable system yet, this OS
 mostly exists as a pile of documents and some broken chroots for now.
 
 This is the main document, here's a few other documents written currently:
