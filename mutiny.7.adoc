@@ -106,12 +106,11 @@ OpenBSD.
         *** https://www.musl-libc.org[`musl`]
         *** http://www.landley.net/toybox/[`toybox`]
             **** https://www.busybox.net[`busybox`] to fill in the cracks, temporarily
-        *** https://www.mirbsd.org/mksh.htm[`mksh`]
-            **** The long-term plan is to switch to the {oil-shell}[Oil shell] once it is fully
+        *** {github}/ibara/oksh[`oksh`], a port of the public domain Korn shell
+            **** A long-term interest is switching to the {oil-shell}[Oil shell] once it is fully
                  functional.
-            **** This is to be decided, however; {github}/emersion/mrsh[mrsh] may also be looked
-                 into, though it lacks arrays and likely won't ever have them since they aren't part
-                 of POSIX.
+            **** {github}/emersion/mrsh[`mrsh`] may also be looked into, though it lacks arrays and
+                 likely won't ever have them since they aren't part of POSIX.
         *** {skarnet}/execline[`execline`] for system automation
         *** {skarnet}/s6[`s6`] and {skarnet}/s6-rc[`s6-rc`] for system initialization and supervision
         *** {github}/leahneukirchen/snooze[`snooze`] for job scheduling
