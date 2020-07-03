@@ -27,15 +27,15 @@ endif::[]
 
 == Name
 
-mutiny - a Linux distribution that aims to be a testbed for interesting system design, forward
-thinking choices, and fun computing
+mutiny - BSD-inspired Linux system and research project aiming to be a testbed for interesting
+system design, forward thinking choices, and fun computing
 
 == Synopsis
 
 Mutiny is a project aiming to deliver a Linux distribution that prioritizes a consistent,
-interesting, and fun to use system. Influenced heavily by minimalist software and and an interest in
-forward-thinking system design, Mutiny aims to explore alternatives to the hegemony and monotony
-that makes up most Linux distributions.
+interesting, and fun to use system. Influenced heavily by BSD system design, minimalist software,
+and an interest in forward-thinking system design, Mutiny aims to explore alternatives to the
+hegemony that makes up most Linux distributions.
 
 == Philosophy
 
