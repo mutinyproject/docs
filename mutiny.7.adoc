@@ -12,7 +12,7 @@ ifdef::backend-html5[]
 image::logo.svg[Mutiny logo]
 
 Mutiny is a young project! If you find the ideas here interesting, please reach out at
-link:irc://irc.freenode.net/mutiny[#\mutiny@irc.freenode.net].
+irc://irc.freenode.net/#mutiny.
 
 There's a set of https://github.com/mutinyproject[git repositories]. No bootable system yet, this OS
 mostly exists as a pile of documents and some broken chroots for now.
