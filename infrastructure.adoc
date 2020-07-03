@@ -1,0 +1,30 @@
+= Infrastructure
+:hide-uri-scheme:
+
+== Name
+
+infrastructure - infrastructure used for the Mutiny project.
+
+== Synopsis
+
+This page consists of a list of each service used by the project, and what machines host what.
+
+== rosa.mutiny.red
+
+:cgit: https://git.zx2c4.com/cgit
+:gitolite: https://gitolite.com/gitolite/index.html
+:laminar: https://laminar.ohwg.net/docs.html
+
+Named for https://wikipedia.org/wiki/Rosa_Luxemburg[Rosa Luxemburg].
+
+.Specifications
+* Hosted on DigitalOcean, Amsterdam
+* 1 CPU
+* 25GB disk
+* Currently running Arch Linux, but once Mutiny is self-hosting it will run that
+
+.Aliases
+* <https://git.mutiny.red> - {cgit}[cgit], {gitolite}[gitolite]
+* <https://ci.mutiny.red> - {laminar}[laminar]
+
+include::footer.adoc[]
