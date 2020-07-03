@@ -1,0 +1,20 @@
+= template(1)
+
+== Name
+
+template - an example AsciiDoc document that demonstrates the preferred style for writing
+documentation under the Mutiny project
+
+== Synopsis
+
+A somewhat longer description of the page contents, or of the usage of the tool in question.
+
+== Description
+
+The bulk of the documentation.
+
+== See also
+
+othermanpages(7), othermanpages(8)
+
+include::footer.adoc[]

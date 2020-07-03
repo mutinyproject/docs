@@ -271,3 +271,5 @@ for users on the system, akin to systemd's user scope...
 * XDG contortions
     ** https://wiki.archlinux.org/index.php/XDG_Base_Directory#Partial[lots of software can be told to use XDG if you just give them the right variables]
     ** should software distributed by us be patched to use XDG?
+
+include::footer.adoc[]
