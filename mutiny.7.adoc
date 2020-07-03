@@ -1,12 +1,18 @@
 = mutiny(7)
-:description: Details, overview, and other notes about the design of a Mutiny system.
-:toc: right
-:toclevels: 4
-:sectlinks:
-:sectanchors:
-:idprefix:
 
 :pp: ++
+
+== Name
+
+mutiny - BSD-inspired Linux system and research project aiming to be a testbed for interesting
+system design, forward thinking choices, and fun computing
+
+== Synopsis
+
+Mutiny is a project aiming to deliver a Linux distribution that prioritizes a consistent,
+interesting, and fun to use system. Influenced heavily by BSD system design, minimalist software,
+and an interest in forward-thinking system design, Mutiny aims to explore alternatives to the
+hegemony that makes up most Linux distributions.
 
 ifdef::backend-html5[]
 image::logo.svg[Mutiny logo]
@@ -21,21 +27,9 @@ This is the main document, here's a few other documents written currently:
 
 * A short design document about <<praxis-design.7.adoc#,praxis>>, the package manager.
 * A longer but unfinished document about the package API, <<theory.7.adoc#,theory>>.
-* A <<software.adoc#,running list of software>> that might be of interest for Mutiny.
+* A <<software.7.adoc#,running list of software>> that might be of interest for Mutiny.
 
 endif::[]
-
-== Name
-
-mutiny - BSD-inspired Linux system and research project aiming to be a testbed for interesting
-system design, forward thinking choices, and fun computing
-
-== Synopsis
-
-Mutiny is a project aiming to deliver a Linux distribution that prioritizes a consistent,
-interesting, and fun to use system. Influenced heavily by BSD system design, minimalist software,
-and an interest in forward-thinking system design, Mutiny aims to explore alternatives to the
-hegemony that makes up most Linux distributions.
 
 == Philosophy
 

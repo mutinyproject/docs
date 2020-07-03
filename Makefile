@@ -1,68 +1,68 @@
-export DEBUG ?= -v --failure-level=error
+name = mutiny
+version = 20200703
 
-export SRCDIR = $(abspath $(dir $(lastword $(MAKEFILE_LIST))))
-export BUILDDIR := $(SRCDIR)/build
-export IMAGE ?= $(SRCDIR)/image
+prefix ?= /usr/local
+datarootdir ?= ${prefix}/share
+datadir ?= ${datarootdir}
+docdir ?= ${datarootdir}/doc/${name}
+htmldir ?= ${docdir}
 
-DOCS := $(shell find $(SRCDIR)/././ -type f -a \( -name '*.adoc' \) -a \! \( -path '$(SRCDIR)/././build/*' -o -path '$(SRCDIR)/././image/*' \))
-DOCS := $(subst $(SRCDIR)/././,,$(DOCS))
+ASCIIDOCTOR ?= asciidoctor
+ASCIIDOCTOR_FLAGS := --failure-level=WARNING
+ASCIIDOCTOR_FLAGS += -a manmanual="Mutineer's Guide"
+ASCIIDOCTOR_FLAGS += -a mansource="Mutiny"
+ASCIIDOCTOR_FLAGS += -a idprefix
+ASCIIDOCTOR_FLAGS += -a sectanchors
+ASCIIDOCTOR_FLAGS += -a sectlinks
+ASCIIDOCTOR_FLAGS += -a toc=left
+ASCIIDOCTOR_FLAGS += -a stylesheet=style.css
 
-MAN := $(shell printf '%s\n' $(DOCS) | grep '[0-9]\.adoc$\')
-MAN := $(subst $(SRCDIR)/././,,$(MAN))
-MAN := $(MAN:.adoc=.man)
+AUXS = \
+    logo.svg
 
-HTML := $(DOCS:.adoc=.html)
+MAN7 = \
+    mutiny.7 \
+    praxis-design.7 \
+    software.7 \
+    theory.7
 
-AUX  := $(shell find $(SRCDIR)/././ -type f -a \( -name '*.svg' \) -a \! \( -path '$(SRCDIR)/././build/*' -o -path '$(SRCDIR)/././image/*' \))
-AUX  := $(subst $(SRCDIR)/././,,$(AUX))
+MANS = ${MAN7}
+HTMLS = ${MANS:=.html}
 
-.PHONY: all man html deploy-html watch clean
-all: html man aux
+all: FRC man
 
-$(BUILDDIR)/man/%.man: $(SRCDIR)/%.adoc $(SRCDIR)/docinfo-footer.man
-	@mkdir -p $(BUILDDIR)/man
-	asciidoctor $(DEBUG) \
-		-B $(BUILDDIR) \
-		-b manpage \
-		-a docinfo=shared \
-		-a docinfodir=$(SRCDIR) \
-		-a manmanual="Mutiny manual" \
-		-o $@ \
-		$(SRCDIR)/$*.adoc || rm -f $@
+man: FRC ${MANS}
+html: FRC ${HTMLS}
 
-$(BUILDDIR)/html/%.html: $(SRCDIR)/%.adoc $(SRCDIR)/docinfo-footer.html
-	@mkdir -p $(BUILDDIR)/html
-	asciidoctor $(DEBUG) \
-		-B $(BUILDDIR) \
-		-b html5 \
-		-a docinfo=shared \
-		-a linkcss \
-		-o "$@" \
-		$(SRCDIR)/$*.adoc
+.SUFFIXES:
+.SUFFIXES: .adoc .html
 
-$(BUILDDIR)/aux/%: $(SRCDIR)/%
-	@mkdir -p $(BUILDDIR)/aux/$(dir $*)
-	cp -f $(SRCDIR)/$* $(BUILDDIR)/aux/$*
+.adoc.html: style.css
+	${ASCIIDOCTOR} ${ASCIIDOCTOR_FLAGS} -b html5 -o $@ $<
 
-man: $(foreach m,$(MAN),$(BUILDDIR)/man/$(m))
-html: $(foreach h,$(HTML),$(BUILDDIR)/html/$(h))
-aux: $(foreach a,$(AUX),$(BUILDDIR)/aux/$(a))
+.adoc: footer.adoc
+	${ASCIIDOCTOR} ${ASCIIDOCTOR_FLAGS} -b manpage -d manpage -o $@ $<
 
-deploy: html aux
-	rsync -vr "$(BUILDDIR)"/html/ "$(BUILDDIR)"/aux/ "$(IMAGE)"/
-	ln -sf mutiny.7.html $(IMAGE)/index.html
+install-man: ${MANS}
+	install -d \
+	    ${DESTDIR}${man7dir}
 
-watch: ; $(MAKE) -j1
-	WATCH=true; \
-	cd $(SRCDIR); \
-	sh -c 'exit 2'; \
-	while [ $$? -eq 2 ];do printf '%s\n' Makefile $(DOCS) $(AUX) | entr -dn $(MAKE) --no-print-directory;done
+	for man7 in ${MAN7}; do install -m0644 $${man7} ${DESTDIR}${man7dir}; done
 
-watch-deploy: ; $(MAKE) -j1
-	WATCH=true; \
-	cd $(SRCDIR); \
-	sh -c 'exit 2'; \
-	while [ $$? -eq 2 ];do printf '%s\n' Makefile $(DOCS) $(AUX) | entr -dn $(MAKE) all deploy --no-print-directory;done
+install-html: ${HTMLS} ${AUXS}
+	install -d \
+	    ${DESTDIR}${htmldir}
 
-clean:
-	rm -rf $(BUILDDIR) $(IMAGE)
+	for file in ${AUXS} ${HTMLS}; do install -m0644 $${file} ${DESTDIR}${htmldir}; done
+	ln -sf mutiny.7.html ${DESTDIR}${htmldir}/index.html
+
+install: install-man
+
+clean: FRC
+	rm -f ${HTMLS} ${MANS}
+
+.DELETE_ON_ERROR: README
+README: mutiny.7
+	man ./$? | col -bx > $@
+
+FRC:

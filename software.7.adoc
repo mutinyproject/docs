@@ -1,11 +1,8 @@
-= software
-Kylie J. McClain <kylie@somas.is>
+= software(7)
 
-:description: A list of software in line with the Mutiny philosophy.
-:toc: right
-:sectlinks:
-:sectanchors:
-:idprefix:
+== Name
+
+software - list of recommended software for use with Mutiny
 
 == System
 * https://sr.ht/~mcf/libtls-bearssl[libtls-bearssl] is an implementation of libtls using
@@ -58,3 +55,5 @@ Kylie J. McClain <kylie@somas.is>
   niceities.
     ** https://github.com/dylanaraps/pash[pash] - appears to be more in line with what I want.
        configuration seems kinda odd, though.
+
+include::footer.adoc[]
