@@ -9,8 +9,6 @@ htmldir ?= ${docdir}
 
 ASCIIDOCTOR ?= asciidoctor
 
--include config.mk
-
 ASCIIDOCTOR_FLAGS += --failure-level=WARNING
 ASCIIDOCTOR_FLAGS += -a manmanual="Mutineer's Guide"
 ASCIIDOCTOR_FLAGS += -a mansource="Mutiny"
@@ -19,8 +17,9 @@ ASCIIDOCTOR_FLAGS += -a toclevels@=3
 ASCIIDOCTOR_FLAGS += -a idprefix@
 ASCIIDOCTOR_FLAGS += -a sectanchors@
 ASCIIDOCTOR_FLAGS += -a sectlinks@
-ASCIIDOCTOR_FLAGS += -a linkcss
-ASCIIDOCTOR_FLAGS += -a stylesheet@=style.css
+
+-include config.mk
+-include site/config.mk
 
 AUXS = \
     logo.svg \
@@ -38,14 +37,20 @@ all: FRC man
 man: FRC ${MANS}
 html: FRC ${HTMLS}
 
+site: FRC
+	sh site.sh ${ASCIIDOCTOR_FLAGS} \
+	    -r asciidoctor-html5s -b html5s \
+	    -a stylesheet@=./style.css \
+	    -a linkcss@
+
 .SUFFIXES:
 .SUFFIXES: .adoc .html
 
 .adoc.html: footer.adoc style.css
-	${ASCIIDOCTOR} ${ASCIIDOCTOR_FLAGS} -b html5 -o $@ $<
+	${ASCIIDOCTOR} -b html5 ${ASCIIDOCTOR_FLAGS} -o $@ $<
 
 .adoc: footer.adoc
-	${ASCIIDOCTOR} ${ASCIIDOCTOR_FLAGS} -b manpage -d manpage -o $@ $<
+	${ASCIIDOCTOR} -b manpage -d manpage ${ASCIIDOCTOR_FLAGS} -o $@ $<
 
 install-man: ${MANS}
 	install -d \
