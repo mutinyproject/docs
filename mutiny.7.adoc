@@ -2,10 +2,22 @@
 
 :pp: ++
 
+== Name
+
+mutiny - BSD-inspired Linux system and research project aiming to be a testbed for interesting
+system design, forward thinking choices, and fun computing
+
+== Synopsis
+
+Mutiny is a project aiming to deliver a Linux distribution that prioritizes a consistent,
+interesting, and fun to use system. Influenced heavily by BSD system design, minimalist software,
+and an interest in forward-thinking system design, Mutiny aims to explore alternatives to the
+hegemony that makes up most Linux distributions.
+
 ifdef::backend-html5s[]
 image::logo.svg[Mutiny logo]
 
-Mutiny is a young project! If you find the ideas here interesting, please reach out at
+Mutiny is young! If you find the ideas here interesting, please reach out at
 irc://irc.freenode.net/#mutiny.
 
 There's a set of https://git.mutiny.red/mutiny[git repositories]. No bootable system yet, this OS
@@ -18,18 +30,6 @@ This is the main document, here's a few other documents written currently:
 * A <<software.7.adoc#,running list of software>> that might be of interest for Mutiny.
 
 endif::[]
-
-== Name
-
-mutiny - BSD-inspired Linux system and research project aiming to be a testbed for interesting
-system design, forward thinking choices, and fun computing
-
-== Synopsis
-
-Mutiny is a project aiming to deliver a Linux distribution that prioritizes a consistent,
-interesting, and fun to use system. Influenced heavily by BSD system design, minimalist software,
-and an interest in forward-thinking system design, Mutiny aims to explore alternatives to the
-hegemony that makes up most Linux distributions.
 
 == Goals
 
