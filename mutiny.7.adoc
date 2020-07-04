@@ -2,18 +2,6 @@
 
 :pp: ++
 
-== Name
-
-mutiny - BSD-inspired Linux system and research project aiming to be a testbed for interesting
-system design, forward thinking choices, and fun computing
-
-== Synopsis
-
-Mutiny is a project aiming to deliver a Linux distribution that prioritizes a consistent,
-interesting, and fun to use system. Influenced heavily by BSD system design, minimalist software,
-and an interest in forward-thinking system design, Mutiny aims to explore alternatives to the
-hegemony that makes up most Linux distributions.
-
 ifdef::backend-html5[]
 image::logo.svg[Mutiny logo]
 
@@ -31,18 +19,27 @@ This is the main document, here's a few other documents written currently:
 
 endif::[]
 
-== Philosophy
+== Name
 
-This section will outline the intent and approach to design that Mutiny aims to have.
+mutiny - BSD-inspired Linux system and research project aiming to be a testbed for interesting
+system design, forward thinking choices, and fun computing
 
-=== Core concepts
+== Synopsis
+
+Mutiny is a project aiming to deliver a Linux distribution that prioritizes a consistent,
+interesting, and fun to use system. Influenced heavily by BSD system design, minimalist software,
+and an interest in forward-thinking system design, Mutiny aims to explore alternatives to the
+hegemony that makes up most Linux distributions.
+
+== Goals
 
 * **Consistency**: Unix systems have suffered from a large amount of inconsistencies
   in maintenance and style in the past decades. Software should be bent to conform, and
   users should come to expect things are going to be a certain way on a Mutiny system.
 * **Use alternatives**: In the Linux world there is often an acceptance that some of the system just
-  sucks, and it's just what we're stuck with. And that's reasonable in some cases where alternatives
-  don't exist. However, Mutiny should aim to explore, thoroughly, alternatives.
+  sucks, but that's just what we're stuck with. And that's reasonable in some cases where
+  alternatives don't exist.
+  However, Mutiny should aim to thoroughly explore alternatives when they do exist.
 * **Documentation**: The system should be thoroughly documented so that you never need to
   reference external websites in order to learn about it. Documentation should be consistent,
   too. This means all documentation should be accessible through *man* or _/share/doc_.
