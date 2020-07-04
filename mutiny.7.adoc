@@ -33,16 +33,36 @@ hegemony that makes up most Linux distributions.
 
 == Goals
 
-* **Consistency**: Unix systems have suffered from a large amount of inconsistencies
-  in maintenance and style in the past decades. Software should be bent to conform, and
-  users should come to expect things are going to be a certain way on a Mutiny system.
-* **Use alternatives**: In the Linux world there is often an acceptance that some of the system just
-  sucks, but that's just what we're stuck with. And that's reasonable in some cases where
-  alternatives don't exist.
-  However, Mutiny should aim to thoroughly explore alternatives when they do exist.
-* **Documentation**: The system should be thoroughly documented so that you never need to
-  reference external websites in order to learn about it. Documentation should be consistent,
-  too. This means all documentation should be accessible through *man* or _/share/doc_.
+*Consistency*::
+    Linux systems have suffered from a large amount of inconsistencies in maintenance and style.
+    This is part due to the bazaar model of development, but it doesn't have to be this way.
+    Software should be bent to conform, and users should come to expect things are going to be a
+    certain way on a *Mutiny* system.
+
+*Alternatives*::
+    In the Linux world there is often an acceptance that some of the system just
+    sucks, but that's just what we're stuck with. And that's reasonable in some cases where
+    alternatives don't exist.
+    However, *Mutiny* should aim to thoroughly explore alternatives when they do exist.
+
+*Documentation*::
+    The system should be thoroughly documented so that you never need to
+    reference external websites in order to learn about it. Documentation should be consistent,
+    too. On *Mutiny*, all documentation should be accessible through *man* or _/share/doc_.
+
+=== Documentation
+
+The state of system administration nowadays can be very fragmented. Most people just search for the
+documentation online nowadays, finding the manuals to be lacking, or just too archaic.
+
+However this is rarely a problem with *BSD systems. This is because BSD systems, historically, have
+put more emphasis on good documentation of their systems. Every single aspect of the kernel's
+internals, drivers, quirks, etc., is documented in a manpage.
+
+On a large scale, this unity in the system is what Mutiny is striving for. Linux systems have had a
+tendency to be disjointed at times, as the model which the system is developed in doesn't usually
+correspond to the stewardship that comes with the tightly-managed attitude of something like
+OpenBSD.
 
 === Standards adherence
 
@@ -59,20 +79,6 @@ of a bad standard being replaced in Mutiny is the <<Filesystem layout>>, which s
 
 Good examples of standards we want to follow would be standards like the
 {xdg-base-directory-specification}[XDG Base Directory Specification].
-
-=== Documentation
-
-The state of system administration nowadays can be very fragmented. Most people just search for the
-documentation online nowadays, finding the manuals to be lacking, or just too archaic.
-
-However this is rarely a problem with *BSD systems. This is because BSD systems, historically, have
-put more emphasis on good documentation of their systems. Every single aspect of the kernel's
-internals, drivers, quirks, etc., is documented in a manpage.
-
-On a large scale, this unity in the system is what Mutiny is striving for. Linux systems have had a
-tendency to be disjointed at times, as the model which the system is developed in doesn't usually
-correspond to the stewardship that comes with the tightly-managed attitude of something like
-OpenBSD.
 
 == Prior art
 
