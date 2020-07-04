@@ -17,7 +17,7 @@ while [ $# -gt 0 ]; do
 done
 
 for d in ${COMBINES}; do
-    name="${d##*/}"; name="${d%%.git}"
+    name="${d##*/}"; name="${name%%.git}"
     git clone --depth=1 "${d}" site/"${name}"
     touch site/"${name}"/config.mk
     [ -f ./config.mk ] && cat ./config.mk > site/"${name}"/config.mk
@@ -27,12 +27,12 @@ done
 make clean
 
 for d in ${COMBINES}; do
-    name="${d##*/}"; name="${d%%.git}"
+    name="${d##*/}"; name="${name%%.git}"
     make -C site/"${name}" html
 done
 
 for d in .. ${COMBINES}; do
-    name="${d##*/}"; name="${d%%.git}"
+    name="${d##*/}"; name="${name%%.git}"
     make -C site/"${name}" install-html DESTDIR="${PWD}"/site/generated htmldir=/
 done
 
