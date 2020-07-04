@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -ex
+set -e
 
 rm -rf site
 mkdir -p site
