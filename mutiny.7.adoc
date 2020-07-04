@@ -2,7 +2,7 @@
 
 :pp: ++
 
-ifdef::backend-html5[]
+ifdef::backend-html5s[]
 image::logo.svg[Mutiny logo]
 
 Mutiny is a young project! If you find the ideas here interesting, please reach out at
