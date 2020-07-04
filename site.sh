@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -x
+set -ex
 
 rm -rf site
 mkdir -p site
@@ -19,13 +19,13 @@ for d in ${COMBINES}; do
     ln -sf ../config.mk site/"${d}"/config.mk
 done
 
-make ${MAKEFLAGS} clean
+make clean
 
 for d in ${COMBINES}; do
-    make ${MAKEFLAGS} -C site/"${d}" html
+    make -C site/"${d}" html
 done
 
 for d in ../ ${COMBINES}; do
-    make ${MAKEFLAGS} -C site/"${d}" install-html DESTDIR="${PWD}"/site/generated htmldir=/
+    make -C site/"${d}" install-html DESTDIR="${PWD}"/site/generated htmldir=/
 done
 
