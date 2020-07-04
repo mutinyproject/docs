@@ -25,7 +25,7 @@ mostly exists as a pile of documents and some broken chroots for now.
 
 This is the main document, here's a few other documents written currently:
 
-* A short design document about <<praxis-design.7.adoc#,praxis>>, the package manager.
+* A design document about <<praxis.7.adoc#,praxis>>, the package manager.
 * A longer but unfinished document about the package API, <<theory.5.adoc#,theory>>.
 * A <<software.7.adoc#,running list of software>> that might be of interest for Mutiny.
 
