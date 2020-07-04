@@ -8,14 +8,15 @@ docdir ?= ${datarootdir}/doc/${name}
 htmldir ?= ${docdir}
 
 ASCIIDOCTOR ?= asciidoctor
-ASCIIDOCTOR_FLAGS := --failure-level=WARNING
+ASCIIDOCTOR_FLAGS += --failure-level=WARNING
 ASCIIDOCTOR_FLAGS += -a manmanual="Mutineer's Guide"
 ASCIIDOCTOR_FLAGS += -a mansource="Mutiny"
-ASCIIDOCTOR_FLAGS += -a toc=preamble@
+ASCIIDOCTOR_FLAGS += -a toc@
 ASCIIDOCTOR_FLAGS += -a toclevels@=3
 ASCIIDOCTOR_FLAGS += -a idprefix@
 ASCIIDOCTOR_FLAGS += -a sectanchors@
 ASCIIDOCTOR_FLAGS += -a sectlinks@
+ASCIIDOCTOR_FLAGS += -a linkcss
 ASCIIDOCTOR_FLAGS += -a stylesheet@=style.css
 
 AUXS = \
@@ -39,7 +40,7 @@ html: FRC ${HTMLS}
 .SUFFIXES:
 .SUFFIXES: .adoc .html
 
-.adoc.html: style.css
+.adoc.html: footer.adoc style.css
 	${ASCIIDOCTOR} ${ASCIIDOCTOR_FLAGS} -b html5 -o $@ $<
 
 .adoc: footer.adoc
