@@ -11,11 +11,12 @@ ASCIIDOCTOR ?= asciidoctor
 ASCIIDOCTOR_FLAGS := --failure-level=WARNING
 ASCIIDOCTOR_FLAGS += -a manmanual="Mutineer's Guide"
 ASCIIDOCTOR_FLAGS += -a mansource="Mutiny"
-ASCIIDOCTOR_FLAGS += -a idprefix
-ASCIIDOCTOR_FLAGS += -a sectanchors
-ASCIIDOCTOR_FLAGS += -a sectlinks
-ASCIIDOCTOR_FLAGS += -a toc=left
-ASCIIDOCTOR_FLAGS += -a stylesheet=style.css
+ASCIIDOCTOR_FLAGS += -a toc=preamble@
+ASCIIDOCTOR_FLAGS += -a toclevels@=3
+ASCIIDOCTOR_FLAGS += -a idprefix@
+ASCIIDOCTOR_FLAGS += -a sectanchors@
+ASCIIDOCTOR_FLAGS += -a sectlinks@
+ASCIIDOCTOR_FLAGS += -a stylesheet@=style.css
 
 AUXS = \
     logo.svg \
