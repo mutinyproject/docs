@@ -8,6 +8,9 @@ docdir ?= ${datarootdir}/doc/${name}
 htmldir ?= ${docdir}
 
 ASCIIDOCTOR ?= asciidoctor
+
+-include config.mk
+
 ASCIIDOCTOR_FLAGS += --failure-level=WARNING
 ASCIIDOCTOR_FLAGS += -a manmanual="Mutineer's Guide"
 ASCIIDOCTOR_FLAGS += -a mansource="Mutiny"
