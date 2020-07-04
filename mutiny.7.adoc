@@ -73,6 +73,9 @@ tendency to be disjointed at times, as the model which the system is developed i
 correspond to the stewardship that comes with the tightly-managed attitude of something like
 OpenBSD.
 
+Manual pages will be required for any package that installs a program to _/bin_, and in all files in
+_/etc_ will also require manual pages to exist for them.
+
 === Standards adherence
 
 :filesystem-hierarchy-standard:     http://refspecs.linuxfoundation.org/FHS_3.0/fhs-3.0.html
