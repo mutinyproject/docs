@@ -25,9 +25,7 @@ AUXS = \
 
 MAN7 = \
     mutiny.7 \
-    praxis-design.7 \
-    software.7 \
-    theory.7
+    software.7
 
 MANS = ${MAN7}
 HTMLS = ${MANS:=.html}
