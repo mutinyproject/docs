@@ -23,6 +23,7 @@ div#header > h1 {
     border-bottom: 4px dashed #b3b3b3;
     color: #ff336d;
     font-family: monospace;
+    margin-top: 0px;
 }
 
 a:link {
