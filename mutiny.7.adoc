@@ -14,7 +14,7 @@ interesting, and fun to use system. Influenced heavily by BSD system design, min
 and an interest in forward-thinking system design, Mutiny aims to explore alternatives to the
 hegemony that makes up most Linux distributions.
 
-ifdef::backend-html5s[]
+ifdef::backend-html5[]
 image::logo.svg[Mutiny logo]
 
 Mutiny is young! If you find the ideas here interesting, please reach out at
