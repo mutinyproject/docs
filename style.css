@@ -1,15 +1,15 @@
 html {
     margin: 0 auto;
-    max-width: 960px
+    max-width: 960px;
 }
 
 body {
     padding: 16px;
     font-size: 18px;
-    line-height: 1.5;
     font-family: serif;
     background: #eee;
     color: #000;
+    line-height: 1.5;
 }
 
 footer {
@@ -19,7 +19,7 @@ footer {
     border-top: 2px solid rgba(0, 0, 0, .25);
 }
 
-header > h1 {
+div#header > h1 {
     border-bottom: 4px dashed #b3b3b3;
     color: #ff336d;
     font-family: monospace;
@@ -58,9 +58,19 @@ div#content pre {
     font-size: 14px;
 }
 
+div#toc > div#toctitle {
+    font-weight: bold;
+    font-size: 27px;
+}
+
+li > p,
+dd > p {
+    padding: 0px;
+    margin: 0px;
+}
+
 blockquote {
     border-left: 2px solid #b3b3b3;
     margin: 16px 32px;
     padding-left: 16px;
 }
-

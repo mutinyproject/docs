@@ -37,9 +37,9 @@ all: FRC man
 man: FRC ${MANS}
 html: FRC ${HTMLS}
 
+
 site: FRC
 	sh site.sh ${ASCIIDOCTOR_FLAGS} \
-	    -r asciidoctor-html5s -b html5s \
 	    -a stylesheet@=./style.css \
 	    -a linkcss@
 
