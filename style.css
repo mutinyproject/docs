@@ -64,6 +64,11 @@ div#toc > div#toctitle {
     font-size: 27px;
 }
 
+/* i'm evil */
+div#toc > ul {
+    list-style: decimal;
+}
+
 li > p,
 dd > p {
     padding: 0px;
