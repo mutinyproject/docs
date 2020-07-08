@@ -65,7 +65,7 @@ div#toc > div#toctitle {
 }
 
 /* i'm evil */
-div#toc > ul {
+div#toc ul {
     list-style: decimal;
 }
 
