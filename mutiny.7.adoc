@@ -121,27 +121,27 @@ Good examples of standards we want to follow would be standards like the
         *** `commune-xinit` - manages the user’s Xorg session
 
 * Base
-    ** https://www.musl-libc.org[`musl`]
-    ** http://www.landley.net/toybox/[`toybox`]
+    ** Kernel: https://www.kernel.org/[Linux], long-term releases only
+    ** Standard C library: https://www.musl-libc.org[`musl`]
+    ** Core system utilities: http://www.landley.net/toybox/[`toybox`]
         *** https://www.busybox.net[`busybox`] to fill in the cracks, temporarily
-    ** {github}/ibara/oksh[`oksh`], a port of the public domain Korn shell
+    ** Default shell: {github}/ibara/oksh[OpenBSD `ksh`]
         *** A long-term interest is switching to the {oil-shell}[Oil shell] once it is fully
-             functional.
+            functional.
         *** {github}/emersion/mrsh[`mrsh`] may also be looked into, though it lacks arrays and
-             likely won't ever have them since they aren't part of POSIX.
-    ** {skarnet}/execline[`execline`] for system automation
-    ** {skarnet}/s6[`s6`] and {skarnet}/s6-rc[`s6-rc`] for system initialization and
-        supervision
-    ** {github}/leahneukirchen/snooze[`snooze`] for job scheduling
-    ** {skarnet}/mdevd[`mdevd`] for device handling, firmware loading
-    ** https://www.libressl.org[`libressl`]
-    ** https://mandoc.bsd.lv[`mandoc`]
+            likely won't ever have them since they aren't part of POSIX.
+    ** Init system: {skarnet}/s6[`s6`], {skarnet}/s6-rc[`s6-rc`]
+    ** Job scheduling: {github}/leahneukirchen/snooze[`snooze`]
+    ** System automation: {skarnet}/execline[`execline`]
+    ** Device handling, firmware loading: {skarnet}/mdevd[`mdevd`]
+    ** SSL library: https://www.libressl.org[`libressl`]
+    ** Manual page reader: https://mandoc.bsd.lv[`mandoc`]
 
 * Toolchain
     ** https://llvm.org[LLVM]
         *** https://clang.llvm.org/[`clang`]
         *** https://libcxx.llvm.org[`libc{pp}`]
-        *** https://libcxxabi.llvm.org[`libc{pp}abi`]
+            **** https://libcxxabi.llvm.org[`libc{pp}abi`]
         *** https://lld.llvm.org[`lld`]
     ** https://git.2f30.org/fortify-headers[`fortify-headers`]
     ** https://github.com/sabotage-linux/gettext-tiny[`gettext-tiny`]
