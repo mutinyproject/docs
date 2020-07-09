@@ -149,6 +149,31 @@ Good examples of standards we want to follow would be standards like the
     ** https://github.com/sabotage-linux/gettext-tiny[`gettext-tiny`]
     ** https://invisible-island.net/byacc/byacc.html[`byacc`]
 
+.Software being avoided
+https://www.freedesktop.org/wiki/Software/dbus[dbus]::
+    I'm interested in seeking out alternatives to it for a few reasons.
+
+    . There's only two real implementations of it: the reference implementation, which is what most
+      people use and apparently has enough performances issues that people are working to shove it
+      into the kernel instead of userspace, and https://github.com/bus1/dbus-broker[dbus-broker],
+      which seems to have some level of dependency on systemd. While it might not necessarily be the
+      case, this to me signifies some level of complexity in implementation that I'm not interested
+      in accepting as the norm, and possibly as a system component if enough things want to use it.
+    . There seems to be some good criticism to be had that it is reinventing the wheel.
+    . I think that some of its features, such as service activation, have no place in a system bus.
+
+    . All this aside: it's still required if you use Bluetooth on Linux.
+
+    . Alternative: {skarnet}/skabus[skabus]. Heavily a work in progress, but it looks interesting.
+      For now though, the plan is just to stay away from dbus as much as possible.
+
+https://www.freedesktop.org/wiki/Software/PulseAudio[PulseAudio]::
+    . A bit worryingly complex.
+    . The main appeal of it is in multiplexing sound sources on one sound card. This can already be
+      done with ALSA, it's just not pretty to configure.
+    . The alternative: http://www.sndio.org[sndio]. It's from OpenBSD, it seems to be a lot simpler,
+      and fits in well with the philosophy we're going for because of this.
+
 Nonessential but otherwise interesting software that would be a good fit to the philosophy can be
 found on the <<software.adoc#,software page>>.
 
