@@ -75,6 +75,15 @@ dd > p {
     margin: 0px;
 }
 
+div.ulist > div.title,
+div.olist > div.title,
+div.dlist > div.title {
+    border-bottom: 2px dashed #b3b3b3;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 16px;
+}
+
 blockquote {
     border-left: 2px solid #b3b3b3;
     margin: 16px 32px;
