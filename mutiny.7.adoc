@@ -1,11 +1,14 @@
 = mutiny(7)
 
+:description: A BSD-inspired Linux system and research project, aiming to be a testbed for \
+              interesting system design, forward thinking design choices, minimalism, and fun \
+              computing.
 :pp: ++
 
 == Name
 
 mutiny - BSD-inspired Linux system and research project aiming to be a testbed for interesting
-system design, forward thinking choices, and fun computing
+system design, forward thinking design choices, minimalism, and fun computing
 
 == Synopsis
 
