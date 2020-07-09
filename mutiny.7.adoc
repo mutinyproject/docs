@@ -133,6 +133,8 @@ Good examples of standards we want to follow would be standards like the
     ** Init system: {skarnet}/s6[`s6`], {skarnet}/s6-rc[`s6-rc`]
     ** Job scheduling: {github}/leahneukirchen/snooze[`snooze`]
     ** System automation: {skarnet}/execline[`execline`]
+        *** System-management scripts that are not invoked by a user will be written in execline
+            whenever possible.
     ** Device handling, firmware loading: {skarnet}/mdevd[`mdevd`]
     ** SSL library: https://www.libressl.org[`libressl`]
     ** Manual page reader: https://mandoc.bsd.lv[`mandoc`]
