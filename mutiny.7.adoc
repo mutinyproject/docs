@@ -175,7 +175,7 @@ https://www.freedesktop.org/wiki/Software/PulseAudio[PulseAudio]::
       and fits in well with the philosophy we're going for because of this.
 
 Nonessential but otherwise interesting software that would be a good fit to the philosophy can be
-found on the <<software.adoc#,software page>>.
+found on the <<software.7.adoc#,software page>>.
 
 === Filesystem layout
 
