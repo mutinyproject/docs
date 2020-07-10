@@ -137,7 +137,6 @@ Good examples of standards we want to follow would be standards like the
             whenever possible.
     ** Device handling, firmware loading: {skarnet}/mdevd[`mdevd`]
     ** SSL library: https://www.libressl.org[`libressl`]
-    ** Manual page reader: https://mandoc.bsd.lv[`mandoc`]
 
 * Toolchain
     ** https://llvm.org[LLVM]
@@ -148,6 +147,15 @@ Good examples of standards we want to follow would be standards like the
     ** https://git.2f30.org/fortify-headers[`fortify-headers`]
     ** https://github.com/sabotage-linux/gettext-tiny[`gettext-tiny`]
     ** https://invisible-island.net/byacc/byacc.html[`byacc`]
+
+* Minutiae
+    ** Manual page reader: https://mandoc.bsd.lv[`mandoc`]
+    ** Default framebuffer terminal font: https://github.com/fcambus/spleen[Spleen]
+        *** Spleen is actually the default used on OpenBSD as of 2019, is BSD-licensed, and also
+            contains a good set of sizes, which makes it a good default font for larger, more recent
+            high pixel density displays.
+    ** Line editing library: https://thrysoee.dk/editline/[`libedit`]
+        *** Provides a mostly readline-compatible API.
 
 [#avoid]
 .Software being avoided
