@@ -238,11 +238,7 @@ for users on the system, akin to systemd's user scope...
 https://specifications.freedesktop.org/basedir-spec/latest/[XDG standards]::
     In line with the consistency goal, we should really closely follow organizational standards
     like the XDG Base directory specification. (which is the origin of things like ~/.config,
-    ~/.local, ~/.cache, and so on)
-
-    {url-archxdg}[Lots of software can be told to use XDG if you just give them the right variables]
-
-    .Open questions
+    ~/.local, ~/.cache, and so on) +
     . TODO: Should software distributed by Mutiny be _patched_ to use XDG?
 
 include::footer.adoc[]
