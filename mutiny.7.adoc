@@ -43,16 +43,16 @@ endif::[]
     certain way on a *Mutiny* system.
 
 *Uniqueness*::
-    There are advantages that come with many sorts of distributions acting all alike. But, if you
-    aren't a fan of the similarities, it means there's not much of an alternative for you to look
-    out for. We don't all want a Windows, or a GNOME, or a Mac, and that's okay, just like the
-    people that do. Keeping in line with the testbed attitude, *Mutiny* will always try to make a
-    unique system that people can learn to appreciate for the differences.
+    There are advantages that come with many sorts of systems acting all alike. But, if you aren't a
+    fan of the similarities, it means there's not much of an alternative for you to look out for.
+    We don't all want Windows, or GNOME, or a Mac, and that's okay, just like the people that do.
+    Keeping in line with the testbed attitude, *Mutiny* will always try to make a unique system that
+    people can learn to appreciate for the differences.
 
 *Alternatives*::
-    In the Linux world there is often an acceptance that some of the system just
-    sucks, but that's just what we're stuck with. And that's reasonable in some cases where
-    alternatives don't exist.
+    In the Linux world there is often an acceptance that some of the system just sucks,
+    but that's just what we're stuck with.
+    And that's reasonable in some cases where alternatives don't exist.
     However, *Mutiny* should aim to thoroughly explore alternatives when they do exist.
 
 *Documentation*::
