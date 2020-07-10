@@ -76,17 +76,6 @@ endif::[]
     Manual pages will be required for any package that installs a program to _/bin_, and in all
     files in _/etc_ will also require manual pages to exist for them.
 
-== Prior art
-
-* https://www.exherbo.org[Exherbo Linux] - My former distribution of choice, helped me realize the
-  potential of source-based distributions; ultimately our interests diverged.
-* https://www.openbsd.org[OpenBSD]
-* http://sabotage.tech[Sabotage Linux]
-* https://alpinelinux.org[Alpine Linux]
-* https://voidlinux.org[Void Linux]
-* https://github.com/michaelforney/oasis[oasis]
-* https://github.com/kissx/kiss[kiss linux]
-
 == System
 
 :url-github: https://github.com
@@ -187,6 +176,17 @@ In the Mutiny layout, there are a few goals:
 * Remove redundancy. No more `/media` or `/usr`, `/tmp` points to `/run/tmp`.
 
 See <<hier.7.adoc#,hier(7)>> for a full explanation of the layout.
+
+== Prior art
+
+* https://www.exherbo.org[Exherbo Linux] - My former distribution of choice, helped me realize the
+  potential of source-based distributions; ultimately our interests diverged.
+* https://www.openbsd.org[OpenBSD]
+* http://sabotage.tech[Sabotage Linux]
+* https://alpinelinux.org[Alpine Linux]
+* https://voidlinux.org[Void Linux]
+* https://github.com/michaelforney/oasis[oasis]
+* https://github.com/kissx/kiss[kiss linux]
 
 == Notes
 
