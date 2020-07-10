@@ -159,6 +159,9 @@ Good examples of standards we want to follow would be standards like the
 
 [#avoid]
 .Software being avoided
+Most GNU software::
+    It's a bit played out. I'd just like to see what more there is out there.
+
 https://www.freedesktop.org/wiki/Software/dbus[dbus]::
     I'm interested in seeking out alternatives to it for a few reasons.
 
