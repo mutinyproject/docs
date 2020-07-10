@@ -36,6 +36,7 @@ endif::[]
 
 == Goals
 
+[#goal-grokkability]
 *Grokkability*::
     (grok: verb. "to understand profoundly and intuitively") +
     Do you think you could ever come to understand what you run on your computer day in and day out?
@@ -45,12 +46,14 @@ endif::[]
     learn how the pieces fit together, to learn the philosophy, and really become infatuated with
     some of the unique ideas being brought forth.
 
+[#goal-consistency]
 *Consistency*::
     Linux systems have suffered from a large amount of inconsistencies in maintenance and style.
     This is part due to the bazaar model of development, but it doesn't have to be this way.
     Software should be bent to conform, and users should come to expect things are going to be a
     certain way on a *Mutiny* system.
 
+[#goal-uniqueness]
 *Uniqueness*::
     There are advantages that come with many sorts of systems acting all alike. But, if you aren't a
     fan of the similarities, it means there's not much of an alternative for you to look out for.
@@ -58,12 +61,14 @@ endif::[]
     Keeping in line with the testbed attitude, *Mutiny* will always try to make a unique system that
     people can learn to appreciate for the differences.
 
+[#goal-alternatives]
 *Alternatives*::
     In the Linux world there is often an acceptance that some of the system just sucks,
     but that's just what we're stuck with.
     And that's reasonable in some cases where alternatives don't exist.
     However, *Mutiny* should aim to thoroughly explore alternatives when they do exist.
 
+[#goal-documentation]
 *Documentation*::
     The system should be thoroughly documented so that you never need to
     reference external websites in order to learn about it. Documentation should be consistent,
