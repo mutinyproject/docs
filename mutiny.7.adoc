@@ -217,10 +217,18 @@ possible to do a supervisor as your session manager for Xorg sessions. Furthermo
 able to be carried up to the login level. (call it `commune-user`) This could mean user services
 for users on the system, akin to systemd's user scope...
 
-=== Software contortions
+=== Open questions
 
-* XDG contortions
-    ** https://wiki.archlinux.org/index.php/XDG_Base_Directory#Partial[lots of software can be told to use XDG if you just give them the right variables]
-    ** should software distributed by us be patched to use XDG?
+:url-archxdg: https://wiki.archlinux.org/index.php/XDG_Base_Directory
+
+https://specifications.freedesktop.org/basedir-spec/latest/[XDG standards]::
+    In line with the consistency goal, we should really closely follow organizational standards
+    like the XDG Base directory specification. (which is the origin of things like ~/.config,
+    ~/.local, ~/.cache, and so on)
+
+    {url-archxdg}[Lots of software can be told to use XDG if you just give them the right variables]
+
+    .Open questions
+    . TODO: Should software distributed by Mutiny be _patched_ to use XDG?
 
 include::footer.adoc[]
