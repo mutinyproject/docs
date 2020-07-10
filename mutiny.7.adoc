@@ -173,71 +173,7 @@ In the Mutiny layout, there are a few goals:
 * Embrace the _good_ innovations that have occurred, like `/run` and the `/sbin`+`/bin` merge.
 * Remove redundancy. No more `/media` or `/usr`, `/tmp` points to `/run/tmp`.
 
-```
-/                           - The root, and root user's home directory.
-├── bin                     - System-managed binary files.
-├── dev                     - Device files. (devtmpfs)
-├── etc                     - System-localized configuration.
-├── home                    - User files.
-├── include                 - System-managed header files.
-├── lib                     - System-managed library files.
-├── local
-│   ├── bin                 - User-managed binary files.
-│   ├── include             - User-managed header files.
-│   ├── lib                 - User-managed library files.
-│   └── share               - User managed resource files.
-│       └── man             - User-managed manual pages.
-│
-├── mnt                     - Mounted devices and mountpoints.
-├── proc                    - Process information. (procfs)
-├── run                     - Runtime files. (tmpfs, directory structure created at boot)
-│   ├── tmp                 - Temporary files. (cleared at boot)
-│   └── user                - User runtime files.
-│       └── 1000            - User's `$XDG_RUNTIME_DIR`. (created at login)
-│           └── commune     - User's supervision trees, maintained by `commune` scopes.
-│               ├── snooze  - Corresponds to the running supervision tree for user's jobs.
-│               │             Maintained by `commune-snooze`.
-│               ├── user    - Corresponds to the running supervision tree for the user.
-│               │             Maintained by `commune-user`.
-│               └── xinit   - Corresponds to the running supervision tree for the user's Xorg
-│                             session. Maintained by `commune-xinit`.
-│
-├── sbin                    - Symbolic link to `bin`.
-├── share                   - Managed resource files.
-│   └── man                 - System manual pages.
-│
-├── srv                     - Service directories. (git-daemon, httpd)
-│   ├── git
-│   └── http
-│
-├── sys                     - System/kernel information. (sysfs)
-├── tmp                     - Symbolic link to `run/tmp`.
-├── usr                     - Symbolic link to `.`.
-└── var                     - Persistent system data.
-    ├── cache               - Cache for system programs.
-    │   └── praxis
-    │       └── distfiles   - Downloaded source for packages.
-    │
-    ├── lib                 - Log files for system programs.
-    ├── log                 - Databases and other data for system programs.
-    ├── run                 - Symbolic link to `../run`.
-    └── tmp                 - Persistent yet temporary files, not cleared at boot.
-```
-
-At one point, there was an intent to support cross-compilation, akin to Exherbo's multiarch design.
-This has been removed due to a lack of necessity and ultimately, little gain for a lot of pain to
-take on.
-
-== Package design
-
-* Reasonable command line interface
-* Run (inexpensive) tests by default
-* Libraries
-    ** See: Gentoo's eclasses, Exherbo's exlibs
-* Useful metadata
-    ** Build dependencies vs. runtime dependencies
-    ** Licenses
-    ** Links to documentation
+See <<hier.7.adoc#,hier(7)>> for a full explanation of the layout.
 
 == Notes
 
