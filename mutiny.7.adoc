@@ -196,7 +196,7 @@ as to documentation and support through things like IRC though, and I'm only one
 
 A goal should be to ensure that most documentation is `mdoc` format. `s6` is a notable example of a
 project that doesn't currently have manpages, though I believe that's something many people in the
-community have been wanting.
+community have been wanting, and in fact something I plan to contribute upstream.
 
 There's a few tools written by the main `mandoc` dev that convert other formats to mdoc, they might
 be worth looking at.
