@@ -106,10 +106,10 @@ Good examples of standards we want to follow would be standards like the
 
 == System
 
-:github:    https://github.com
-:skarnet:   https://skarnet.org/software
-:gnu:       https://www.gnu.org/software
-:oil-shell: https://www.oilshell.org
+:url-github: https://github.com
+:url-skarnet: https://skarnet.org/software
+:url-gnu: https://www.gnu.org/software
+:url-oil-shell: https://www.oilshell.org
 
 .Software
 * Mutiny
@@ -125,17 +125,17 @@ Good examples of standards we want to follow would be standards like the
     ** Standard C library: https://www.musl-libc.org[`musl`]
     ** Core system utilities: http://www.landley.net/toybox/[`toybox`]
         *** https://www.busybox.net[`busybox`] to fill in the cracks, temporarily
-    ** Default shell: {github}/ibara/oksh[OpenBSD `ksh`]
-        *** A long-term interest is switching to the {oil-shell}[Oil shell] once it is fully
+    ** Default shell: {url-github}/ibara/oksh[OpenBSD `ksh`]
+        *** A long-term interest is switching to the {url-oil-shell}[Oil shell] once it is fully
             functional.
-        *** {github}/emersion/mrsh[`mrsh`] may also be looked into, though it lacks arrays and
+        *** {url-github}/emersion/mrsh[`mrsh`] may also be looked into, though it lacks arrays and
             likely won't ever have them since they aren't part of POSIX.
-    ** Init system: {skarnet}/s6[`s6`], {skarnet}/s6-rc[`s6-rc`]
-    ** Job scheduling: {github}/leahneukirchen/snooze[`snooze`]
-    ** System automation: {skarnet}/execline[`execline`]
+    ** Init system: {url-skarnet}/s6[`s6`], {skarnet}/s6-rc[`s6-rc`]
+    ** Job scheduling: {url-github}/leahneukirchen/snooze[`snooze`]
+    ** System automation: {url-skarnet}/execline[`execline`]
         *** System-management scripts that are not invoked by a user will be written in execline
             whenever possible.
-    ** Device handling, firmware loading: {skarnet}/mdevd[`mdevd`]
+    ** Device handling, firmware loading: {url-skarnet}/mdevd[`mdevd`]
     ** SSL library: https://www.libressl.org[`libressl`]
 
 * Toolchain
@@ -150,7 +150,7 @@ Good examples of standards we want to follow would be standards like the
 
 * Minutiae
     ** Manual page reader: https://mandoc.bsd.lv[`mandoc`]
-    ** Default framebuffer terminal font: https://github.com/fcambus/spleen[Spleen]
+    ** Default framebuffer terminal font: {url-github}/fcambus/spleen[Spleen]
         *** Spleen is actually the default used on OpenBSD as of 2019, is BSD-licensed, and also
             contains a good set of sizes, which makes it a good default font for larger, more recent
             high pixel density displays.
