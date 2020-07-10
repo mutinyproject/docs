@@ -2,9 +2,9 @@
 
 set -e
 
-rm -rf site
 mkdir -p site
 
+: "${MAKE:=make}"
 : "${COMBINES:=
     https://git.mutiny.red/mutiny/idioms
     https://git.mutiny.red/mutiny/filesystem
@@ -13,24 +13,28 @@ mkdir -p site
 
 for d in ${COMBINES}; do
     name="${d##*/}"; name="${name%%.git}"
-    git clone --depth=1 "${d}" site/"${name}"
-    touch site/"${name}"/config.mk
-    [ -f ./config.mk ] && cat ./config.mk >> site/"${name}"/config.mk
-    ln -sf ../config.mk site/"${name}"/config.mk
+    [ -d site/"${name}" ] || git clone --depth=1 "${d}" site/"${name}"
+    if ! [ -f site/"${name}"/config.mk ]; then
+        touch site/"${name}"/config.mk
+        [ -f ./config.mk ] && cat ./config.mk >> site/"${name}"/config.mk
+        ln -sf ../config.mk site/"${name}"/config.mk
+    fi
 done
 
-while [ $# -gt 0 ]; do
-    printf 'ASCIIDOCTOR_FLAGS += "%s"\n' "$1" >> site/config.mk
-    shift
+if ! [ -f site/config.mk ]; then
+    while [ $# -gt 0 ]; do
+        printf 'ASCIIDOCTOR_FLAGS += "%s"\n' "$1" >> site/config.mk
+        shift
+    done
+fi
+
+for d in .. ${COMBINES}; do
+    name="${d##*/}"; name="${name%%.git}"
+    ${MAKE} ${MAKEFLAGS} -C site/"${name}" html
 done
 
 for d in .. ${COMBINES}; do
     name="${d##*/}"; name="${name%%.git}"
-    make -C site/"${name}" html
-done
-
-for d in .. ${COMBINES}; do
-    name="${d##*/}"; name="${name%%.git}"
-    make -C site/"${name}" install-html DESTDIR="${PWD}"/site/generated htmldir=/
+    ${MAKE} ${MAKEFLAGS} -C site/"${name}" install-html DESTDIR="${PWD}"/site/generated htmldir=/
 done
 
