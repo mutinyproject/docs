@@ -62,21 +62,6 @@ endif::[]
 
     Manual pages will be required for any package that installs a program to _/bin_, and in all
     files in _/etc_ will also require manual pages to exist for them.
-=== Standards adherence
-
-:filesystem-hierarchy-standard:     http://refspecs.linuxfoundation.org/FHS_3.0/fhs-3.0.html
-:file-hierarchy:                    https://www.freedesktop.org/software/systemd/man/file-hierarchy.html
-:xdg-base-directory-specification:  https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
-
-Mutiny should aim to adhere to standards whenever it is possible, and enforce those standards
-on all software that the system uses. When a standard isn't good, or we think it is badly
-designed, we should aim to supersede it with a defined standard of our own. The prime example
-of a bad standard being replaced in Mutiny is the <<Filesystem layout>>, which supersedes the
-{filesystem-hierarchy-standard}[Filesystem Hierarchy Standard] and systemd's
-{file-hierarchy}[file-hierarchy].
-
-Good examples of standards we want to follow would be standards like the
-{xdg-base-directory-specification}[XDG Base Directory Specification].
 
 == Prior art
 
