@@ -3,6 +3,7 @@
 :description: A BSD-inspired Linux system and research project, aiming to be a testbed for \
               interesting system design, forward thinking design choices, minimalism, and fun \
               computing.
+
 :pp: ++
 
 == Name
@@ -103,7 +104,7 @@ endif::[]
             functional.
         *** {url-github}/emersion/mrsh[`mrsh`] may also be looked into, though it lacks arrays and
             likely won't ever have them since they aren't part of POSIX.
-    ** Init system: {url-skarnet}/s6[`s6`], {skarnet}/s6-rc[`s6-rc`]
+    ** Init system: {url-skarnet}/s6[`s6`], {url-skarnet}/s6-rc[`s6-rc`]
     ** Job scheduling: {url-github}/leahneukirchen/snooze[`snooze`]
     ** System automation: {url-skarnet}/execline[`execline`]
         *** System-management scripts that are not invoked by a user will be written in execline
@@ -155,7 +156,8 @@ https://www.freedesktop.org/wiki/Software/dbus[dbus]::
 
     . All this aside: it's still required if you use Bluetooth on Linux.
 
-    . Alternative: {skarnet}/skabus[skabus]. Heavily a work in progress, but it looks interesting.
+    . Alternative: {url-skarnet}/skabus[skabus].
+      Heavily a work in progress, but it looks interesting.
       For now though, the plan is just to stay away from dbus as much as possible.
 
 https://www.freedesktop.org/wiki/Software/PulseAudio[PulseAudio]::
