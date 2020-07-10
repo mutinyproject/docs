@@ -36,6 +36,15 @@ endif::[]
 
 == Goals
 
+*Grokkability*::
+    (grok: verb. "to understand profoundly and intuitively") +
+    Do you think you could ever come to understand what you run on your computer day in and day out?
+    There's something to be said for being able to. While some things in a system can usually be
+    overlooked, on *Mutiny* we want to promote an understandable, conceptualizable system.
+    You don't _have_ to understand what everything does as an end--but it should be encouraged to
+    learn how the pieces fit together, to learn the philosophy, and really become infatuated with
+    some of the unique ideas being brought forth.
+
 *Consistency*::
     Linux systems have suffered from a large amount of inconsistencies in maintenance and style.
     This is part due to the bazaar model of development, but it doesn't have to be this way.
