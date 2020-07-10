@@ -127,10 +127,16 @@ endif::[]
     ** Line editing library: https://thrysoee.dk/editline/[`libedit`]
         *** Provides a mostly readline-compatible API.
 
+:url-pgp: https://latacora.micro.blog/2019/07/16/the-pgp-problem.html
+
 [#avoid]
 .Software being avoided
 Most GNU software::
     It's a bit played out. I'd just like to see what more there is out there.
+
+https://gnupg.org[GnuPG]::
+    {url-pgp}[PGP kinda really sucks and we all need to give up the ghost.]
+    And it has a bunch of dependencies, and it's horrendously bloated in terms of features.
 
 https://www.freedesktop.org/wiki/Software/dbus[dbus]::
     I'm interested in seeking out alternatives to it for a few reasons.
