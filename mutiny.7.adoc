@@ -100,7 +100,7 @@ Good examples of standards we want to follow would be standards like the
 * https://www.openbsd.org[OpenBSD]
 * http://sabotage.tech[Sabotage Linux]
 * https://alpinelinux.org[Alpine Linux]
-* https://voidlinux.eu[Void Linux]
+* https://voidlinux.org[Void Linux]
 * https://github.com/michaelforney/oasis[oasis]
 * https://github.com/kissx/kiss[kiss linux]
 
