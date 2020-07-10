@@ -30,11 +30,11 @@ fi
 
 for d in .. ${COMBINES}; do
     name="${d##*/}"; name="${name%%.git}"
-    ${MAKE} ${MAKEFLAGS} -C site/"${name}" html
+    ${MAKE} -C site/"${name}" html
 done
 
 for d in .. ${COMBINES}; do
     name="${d##*/}"; name="${name%%.git}"
-    ${MAKE} ${MAKEFLAGS} -C site/"${name}" install-html DESTDIR="${PWD}"/site/generated htmldir=/
+    ${MAKE} -C site/"${name}" install-html DESTDIR="${PWD}"/site/generated htmldir=/
 done
 
