@@ -13,7 +13,12 @@ mkdir -p site
 
 for d in ${COMBINES}; do
     name="${d##*/}"; name="${name%%.git}"
-    [ -d site/"${name}" ] || git clone --depth=1 "${d}" site/"${name}"
+    if [ -d site/"${name}" ]; then
+        git -C site/"${name}" pull
+    else
+        git clone --depth=1 "${d}" site/"${name}"
+    fi
+
     if ! [ -f site/"${name}"/config.mk ]; then
         touch site/"${name}"/config.mk
         [ -f ./config.mk ] && cat ./config.mk >> site/"${name}"/config.mk
