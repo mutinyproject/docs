@@ -83,6 +83,7 @@ endif::[]
 :url-gnu: https://www.gnu.org/software
 :url-oil-shell: https://www.oilshell.org
 
+[#software]
 .Software
 * Mutiny
     ** <<praxis.7.adoc#,`praxis`>> - a source-based package manager
@@ -131,7 +132,7 @@ endif::[]
 
 :url-pgp: https://latacora.micro.blog/2019/07/16/the-pgp-problem.html
 
-[#avoid]
+[#software-avoid]
 .Software being avoided
 Most GNU software::
     It's a bit played out. I'd just like to see what more there is out there.
