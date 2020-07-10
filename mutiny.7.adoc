@@ -67,8 +67,7 @@ endif::[]
 *Documentation*::
     The system should be thoroughly documented so that you never need to
     reference external websites in order to learn about it. Documentation should be consistent,
-    too. On *Mutiny*, all documentation should be accessible through *man* or _/share/doc_.
-
+    too. On *Mutiny*, all documentation should be accessible through *man* or _/share/doc_. +
     Manual pages will be required for any package that installs a program to _/bin_, and in all
     files in _/etc_ will also require manual pages to exist for them.
 
