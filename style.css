@@ -16,7 +16,7 @@ html {
 
 body {
     margin: 0px;
-    padding: 1rem;
+    padding: 2rem;
     font-family: serif;
     background: #eee;
     color: #000;
@@ -103,6 +103,6 @@ blockquote {
 
 @media screen and (max-width: 37.5rem) {
     body {
-        padding: .5em;
+        padding: 1rem;
     }
 }
