@@ -82,10 +82,18 @@ div#toc ul {
     list-style: decimal;
 }
 
-li > p,
-dd > p {
+li > p {
     padding: 0px;
     margin: 0px;
+}
+
+dd > p {
+    margin: 0px;
+}
+
+dd > p,
+dd > *:last-child {
+    margin-bottom: 1rem;
 }
 
 div.ulist > div.title,
