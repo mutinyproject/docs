@@ -101,10 +101,7 @@ endif::[]
     ** Core system utilities: http://www.landley.net/toybox/[`toybox`]
         *** https://www.busybox.net[`busybox`] to fill in the cracks, temporarily
     ** Default shell: {url-github}/ibara/oksh[OpenBSD `ksh`]
-        *** A long-term interest is switching to the {url-oil-shell}[Oil shell] once it is fully
-            functional.
-        *** {url-github}/emersion/mrsh[`mrsh`] may also be looked into, though it lacks arrays and
-            likely won't ever have them since they aren't part of POSIX.
+        *** The {url-oil-shell}[Oil shell] is also being looked at.
     ** Init system: {url-skarnet}/s6[`s6`], {url-skarnet}/s6-rc[`s6-rc`]
     ** Job scheduling: {url-github}/leahneukirchen/snooze[`snooze`]
     ** System automation: {url-skarnet}/execline[`execline`]
