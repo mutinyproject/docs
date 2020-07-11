@@ -13,15 +13,10 @@ mkdir -p site
 
 for d in ${COMBINES}; do
     name="${d##*/}"; name="${name%%.git}"
-    if git -C "${d}" rev-parse --git-dir >/dev/null 2>&1 \
-       && git -C "${d}" diff --exit-code >/dev/null 2>&1;then
-        if [ -d site/"${name}" ]; then
-            git -C site/"${name}" pull "${d}"
-        else
-            git clone --depth=1 "${d}" site/"${name}"
-        fi
+    if [ -d site/"${name}" ]; then
+        git -C site/"${name}" pull
     else
-        [ -e "${d}" ] && rsync -rua --del "${d}"/ site/"${name}"
+        git clone --depth=1 "${d}" site/"${name}"
     fi
 
     if ! [ -f site/"${name}"/config.mk ]; then
