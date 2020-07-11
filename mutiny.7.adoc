@@ -81,6 +81,7 @@ endif::[]
 
 :url-github: https://github.com
 :url-skarnet: https://skarnet.org/software
+:url-dieshdiedie: {url-skarnet}/execline/dieshdiedie.html
 :url-gnu: https://www.gnu.org/software
 :url-oil-shell: https://www.oilshell.org
 
@@ -108,7 +109,7 @@ endif::[]
     ** Job scheduling: {url-github}/leahneukirchen/snooze[`snooze`]
     ** System automation: {url-skarnet}/execline[`execline`]
         *** System-management scripts that are not invoked by a user will be written in execline
-            whenever possible.
+            whenever possible. {url-dieshdiedie}[See skarnet's explanation for reasons why].
     ** Device handling, firmware loading: {url-skarnet}/mdevd[`mdevd`]
     ** SSL library: https://www.libressl.org[`libressl`]
 
