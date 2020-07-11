@@ -4,7 +4,7 @@
 
     Let 16px be the browser's default font size.
 
-    16px/1rem   = .0625
+    1rem/16px   = .0625
     <px>*.0625 to get rem count
     <rem>/.0625 to get px count
 */
