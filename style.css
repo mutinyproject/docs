@@ -116,3 +116,29 @@ blockquote {
         padding: 1rem;
     }
 }
+
+@media screen and (prefers-color-scheme: dark) {
+    body {
+        background-color: #2f343f;
+        color: #fff;
+    }
+
+    a:visited {
+        color: #d475e8;
+    }
+
+    a:active,
+    a:visited:active {
+        color: #01a022;
+    }
+
+    blockquote,
+    div.ulist > div.title,
+    div.olist > div.title,
+    div.dlist > div.title,
+    div#content pre,
+    div#header > h1,
+    div#footer {
+        border-color: #a0a0a0;
+    }
+}
