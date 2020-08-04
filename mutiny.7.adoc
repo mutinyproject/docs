@@ -123,9 +123,9 @@ endif::[]
 * Minutiae
     ** Manual page reader: https://mandoc.bsd.lv[`mandoc`]
     ** Default framebuffer terminal font: {url-github}/fcambus/spleen[Spleen]
-        *** Spleen is actually the default used on OpenBSD as of 2019, is BSD-licensed, and also
-            contains a good set of sizes, which makes it a good default font for larger, more recent
-            high pixel density displays.
+        *** Spleen is actually the default used on OpenBSD as of 2019, and it contains a good set of
+            sizes, which makes it a good default font for larger, more recent high pixel density
+            displays. It also looks nice.
     ** Line editing library: https://thrysoee.dk/editline/[`libedit`]
         *** Provides a mostly readline-compatible API.
 
